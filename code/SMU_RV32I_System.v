@@ -39,6 +39,8 @@ module SMU_RV32I_System (
   wire [31:0] imem_inst;
   wire [31:0] inst;
   wire [31:0] data_addr;
+  wire [31:0] read_data_gpio;
+  wire [31:0] read_data_timer;
   wire [31:0] write_data;
   wire [3:0]  ByteEnable;
   reg  [31:0] read_data;
@@ -76,8 +78,12 @@ module SMU_RV32I_System (
   wire cs_bios_n;
   wire [31:0] read_imem_data_mem;
 
-  assign read_data = read_imem_data_mem;
-
+  always @(*)
+  begin
+	  if      (~cs_timer_n) read_data <= read_data_timer;
+	  else if (~cs_gpio_n)  read_data <= read_data_gpio;
+	  else                  read_data <= read_imem_data_mem;
+  end
 	rv32i_cpu #(
       .RESET_PC(RESET_PC)
   ) icpu (
@@ -117,6 +123,43 @@ module SMU_RV32I_System (
 
   // Add Address Decoder & Data Mux
   // Add Timer, GPIO, UART
-  
+
+    Addr_Decoder iDecoder ( 
+		.Addr        (data_addr),
+		.CS_MEM_N    (cs_mem_n) ,
+		.CS_TC_N     (cs_timer_n),
+		.CS_UART_N   (cs_uart_n),
+		.CS_GPIO_N   (cs_gpio_n));
+
+
+  	TimerCounter iTimer (
+		.clk     (clk0),
+		.reset   (~reset_ff),
+		.CS_N    (cs_timer_n),
+		.RD_N    (~data_re),
+		.WR_N    (~data_we),
+		.Addr    (data_addr[11:0]),
+		.DataIn  (write_data),
+		.DataOut (read_data_timer),
+		.Intr    ());
+
+
+   GPIO iGPIO (
+    .clk 	(clk0),
+    .reset  (~reset_ff),
+    .CS_N   (cs_gpio_n),
+    .RD_N   (~data_re),
+    .WR_N   (~data_we),
+    .Addr   (data_addr[11:0]),
+    .DataIn (write_data),
+    .DataOut(read_data_gpio),
+    .Intr   (),
+    .BUTTON (BUTTON[2:1]),
+    .SW     (SW),
+    .HEX3  	(HEX3),
+    .HEX2  	(HEX2),
+    .HEX1  	(HEX1),
+    .HEX0  	(HEX0),
+    .LEDG   (LEDR));
  
 endmodule
