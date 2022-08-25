@@ -1,0 +1,529 @@
+ls
+# sim
+# sim_model
+# src
+# testbench
+# transcript
+pwd
+# /home/user/pll_test
+cd sim
+ls
+# modelsim
+cd modelsim
+ls
+# run.f
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:24:46 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# ** Error: (vlog-13069) ../../testbench/testbench.v(25): near ",": syntax error, unexpected ','.
+# ** Error: ../../testbench/testbench.v(25): (vlog-13205) Syntax error found in the scope following 'inclk0'. Is there a missing '::'?
+# End time: 14:24:46 on Aug 23,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /home/user/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/vlog failed.
+ls
+# run.f
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:25:12 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:25:12 on Aug 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:25:12 on Aug 23,2022
+# Loading work.testbench
+# Loading work.test2
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/outclk_0 \
+sim:/testbench/outclk_1 \
+sim:/testbench/outclk_2 \
+sim:/testbench/outclk_3 \
+sim:/testbench/locked
+run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 500  Instance: testbench.a.altpll_component.cycloneiii_pll.pll3
+quit -sim
+# End time: 14:25:57 on Aug 23,2022, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 0
+ls
+# run.f
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:26:02 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# ** Error: (vlog-13069) ../../testbench/testbench.v(29): near "#": syntax error, unexpected '#'.
+# End time: 14:26:02 on Aug 23,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/user/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/vlog failed.
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:26:24 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# ** Error: (vlog-13069) ../../testbench/testbench.v(30): near "end": syntax error, unexpected end, expecting ';'.
+# End time: 14:26:24 on Aug 23,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /home/user/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/vlog failed.
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:26:35 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:26:36 on Aug 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:26:36 on Aug 23,2022
+# Loading work.testbench
+# Loading work.test2
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/outclk_0 \
+sim:/testbench/outclk_1 \
+sim:/testbench/outclk_2 \
+sim:/testbench/outclk_3 \
+sim:/testbench/locked
+run -all
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 60 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29
+quit -sim
+# End time: 14:27:37 on Aug 23,2022, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 0
+ls
+# run.f
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:27:44 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:27:45 on Aug 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:27:45 on Aug 23,2022
+# Loading work.testbench
+# Loading work.test2
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/outclk_0 \
+sim:/testbench/outclk_1 \
+sim:/testbench/outclk_2 \
+sim:/testbench/outclk_3 \
+sim:/testbench/locked
+run -all
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 120 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29
+quit -sim
+# End time: 14:28:39 on Aug 23,2022, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 0
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:28:44 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:28:45 on Aug 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:28:45 on Aug 23,2022
+# Loading work.testbench
+# Loading work.test2
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/outclk_0 \
+sim:/testbench/outclk_1 \
+sim:/testbench/outclk_2 \
+sim:/testbench/outclk_3 \
+sim:/testbench/locked
+run -all
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 120 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29
+add wave -position insertpoint  \
+sim:/testbench/a/c0 \
+sim:/testbench/a/c1 \
+sim:/testbench/a/c2 \
+sim:/testbench/a/c3
+# Break key hit
+restart
+run -all
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 120 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29
+quit -sim
+# End time: 14:35:18 on Aug 23,2022, Elapsed time: 0:06:33
+# Errors: 0, Warnings: 0
+ls
+# run.f
+# test2.bsf
+# test2.cmp
+# test2.inc
+# test2.ppf
+# test2.qip
+# test2_bb.v
+# test2_inst.v
+# test2_syn.v
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:35:27 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:35:27 on Aug 23,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:35:27 on Aug 23,2022
+# Loading work.testbench
+# Loading work.test2
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/outclk_0 \
+sim:/testbench/outclk_1 \
+sim:/testbench/outclk_2 \
+sim:/testbench/outclk_3 \
+sim:/testbench/locked
+run -all
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 120 ps  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29
+quit -sim
+# End time: 14:39:32 on Aug 23,2022, Elapsed time: 0:04:05
+# Errors: 0, Warnings: 0
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:39:37 on Aug 23,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module test2
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 14:39:38 on Aug 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:39:38 on Aug 23,2022
+# Loading work.testbench
+# Loading work.test2
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 45000  Instance: testbench.a.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 3 us  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29
+add wave -position insertpoint  \
+sim:/testbench/clk \
+sim:/testbench/outclk_0 \
+sim:/testbench/outclk_1 \
+sim:/testbench/outclk_2 \
+sim:/testbench/outclk_3 \
+sim:/testbench/locked
+restart
+run -all
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 45000  Instance: testbench.a.altpll_component.cycloneiii_pll.pll3
+# ** Note: $stop    : ../../testbench/testbench.v(29)
+#    Time: 3 us  Iteration: 0  Instance: /testbench
+# Break in Module testbench at ../../testbench/testbench.v line 29

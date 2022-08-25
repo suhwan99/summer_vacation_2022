@@ -1,0 +1,89 @@
+debImport "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "c_tests_tb"
+schSelect -win $_nSchema3 -inst "CPU"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -signal "clk" "_ExprNet__:icpu:0:reset" "data_we" \
+          "write_data\[31:0\]" "read_data\[31:0\]" "fetch_addr\[31:0\]" \
+          "inst\[31:0\]" "data_addr\[31:0\]" "ByteEnable\[3:0\]" -instport \
+          "icpu" "ByteEnable\[3:0\]" "icpu" "MemWData\[31:0\]" "icpu" \
+          "MemAddr\[31:0\]" "icpu" "MemWrite" "icpu" "pc\[31:0\]" "icpu" \
+          "MemRData\[31:0\]" "icpu" "inst\[31:0\]" "icpu" "reset" "icpu" "clk" \
+          -inst "icpu"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/test/phase3/hardware/sim_cpu_test/vcs/wave.fsdb}
+schSelect -win $_nSchema3 -signal "clk" "_ExprNet__:icpu:0:reset" "data_we" \
+          "write_data\[31:0\]" "read_data\[31:0\]" "fetch_addr\[31:0\]" \
+          "inst\[31:0\]" "data_addr\[31:0\]" "ByteEnable\[3:0\]" -instport \
+          "icpu" "ByteEnable\[3:0\]" "icpu" "MemWData\[31:0\]" "icpu" \
+          "MemAddr\[31:0\]" "icpu" "MemWrite" "icpu" "pc\[31:0\]" "icpu" \
+          "MemRData\[31:0\]" "icpu" "inst\[31:0\]" "icpu" "reset" "icpu" "clk" \
+          -inst "icpu"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 225440.331992 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 276918.832998 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 326622.213280 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 383426.076459 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 418928.490946 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 488158.199195 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 580464.476861 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 239641.297787 -snap {("G1" 6)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb}
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 1102048.189135 -snap {("G1" 5)}
+wvZoom -win $_nWave2 734698.792757 6612289.134809
+wvZoom -win $_nWave2 734698.792756 5630719.721549
+wvZoom -win $_nWave2 734698.792756 1276511.974011
+wvSetCursor -win $_nWave2 228935.147009 -snap {("G1" 6)}
+wvSetCursor -win $_nWave2 249103.243293 -snap {("G1" 6)}
+debExit

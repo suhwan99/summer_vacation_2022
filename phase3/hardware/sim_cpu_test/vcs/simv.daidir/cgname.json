@@ -1,0 +1,74 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        12
+    ],
+    "adder_1bit": [
+        "adder_1bit",
+        "KaZs1",
+        "module",
+        1
+    ],
+    "ASYNC_RAM_DP_WBE": [
+        "ASYNC_RAM_DP_WBE",
+        "TV9z4",
+        "module",
+        4
+    ],
+    "rv32i_cpu": [
+        "rv32i_cpu",
+        "HLPA2",
+        "module",
+        7
+    ],
+    "cpu_tb": [
+        "cpu_tb",
+        "mvuYT",
+        "module",
+        11
+    ],
+    "Addr_Decoder": [
+        "Addr_Decoder",
+        "gMGVA",
+        "module",
+        5
+    ],
+    "GPIO": [
+        "GPIO",
+        "JWNVz",
+        "module",
+        8
+    ],
+    "pulse_gen": [
+        "pulse_gen",
+        "T7HIq",
+        "module",
+        6
+    ],
+    "dualport_mem_synch_rw_dualclk": [
+        "dualport_mem_synch_rw_dualclk",
+        "hk5wD",
+        "module",
+        13
+    ],
+    "ALTERA_DEVICE_FAMILIES": [
+        "ALTERA_DEVICE_FAMILIES",
+        "uFC8u",
+        "module",
+        9
+    ],
+    "cda_scale_cntr": [
+        "cda_scale_cntr",
+        "wc8HV",
+        "module",
+        10
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        3
+    ]
+}

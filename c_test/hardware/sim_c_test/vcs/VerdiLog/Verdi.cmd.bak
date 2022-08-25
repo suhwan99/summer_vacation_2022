@@ -1,0 +1,51 @@
+debImport "-f" "run.f"
+srcHBSelect "c_tests_tb.CPU" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU" -delim "."
+srcHBSelect "c_tests_tb.CPU" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath.ALU1" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1.adder32i" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath.ALU1.adder32i" -delim \
+           "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1.adder32i" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1.adder32i" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath.ALU1.adder32i" -delim \
+           "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1.adder32i" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath.ALU1" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath.ALU1" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath.ALU1" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.i_datapath" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu.i_datapath" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu" -win $_nTrace1
+srcHBSelect "c_tests_tb.CPU.icpu.k" -win $_nTrace1
+srcSetScope -win $_nTrace1 "c_tests_tb.CPU.icpu.k" -delim "."
+srcHBSelect "c_tests_tb.CPU.icpu.k" -win $_nTrace1
+verdiDockWidgetSetCurTab -dock widgetDock_<Decl._Tree>
+verdiDockWidgetSetCurTab -dock widgetDock_<Inst._Tree>
+srcHBSelect "c_tests_tb.CPU.icpu.k" -win $_nTrace1
+nsMsgSwitchTab -tab intercon
+nsMsgSwitchTab -tab cmpl
+nsMsgSwitchTab -tab trace
+nsMsgSwitchTab -tab search
+nsMsgSwitchTab -tab general
+srcDeselectAll -win $_nTrace1
+srcTBInvokeSim
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "c_tests_tb.CPU.icpu.k"
+wvSelectGroup -win $_nWave3 {G1}
+wvSelectGroup -win $_nWave3 {G1}
+wvSelectGroup -win $_nWave3 {G1}
+wvGetSignalOpen -win $_nWave3
+debExit

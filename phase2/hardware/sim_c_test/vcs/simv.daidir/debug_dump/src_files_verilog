@@ -1,0 +1,12 @@
+/home/user/test/phase2/hardware/sim_c_test/vcs/mem_path.vh
+/home/user/test/phase2/hardware/src/rtl/ALU.v
+/home/user/test/phase2/hardware/src/rtl/ASYNC_RAM_DP_WBE.v
+/home/user/test/phase2/hardware/src/rtl/Addr_Decoder.v
+/home/user/test/phase2/hardware/src/rtl/GPIO.v
+/home/user/test/phase2/hardware/src/rtl/SMU_RV32I_System.v
+/home/user/test/phase2/hardware/src/rtl/TimerCounter.v
+/home/user/test/phase2/hardware/src/rtl/adder_32bit.v
+/home/user/test/phase2/hardware/src/rtl/control_unit.v
+/home/user/test/phase2/hardware/src/rtl/cpu_main.v
+/home/user/test/phase2/hardware/src/rtl/register_file_async.v
+/home/user/test/phase2/hardware/testbench/c_tests_tb.v

@@ -1,0 +1,20 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -f run.f
+        ../../src/rtl/ALU.v
+        ../../src/rtl/adder_32bit.v
+        ../../src/rtl/ASYNC_RAM_DP_WBE.v
+        ../../src/rtl/control_unit.v
+        ../../src/rtl/cpu_main.v
+        ../../src/rtl/register_file_async.v
+        ../../src/rtl/SMU_RV32I_System.v
+        ../../testbench/c_tests_tb.v
+        ../../src/rtl/Addr_Decoder.v
+        ../../src/rtl/GPIO.v
+        ../../src/rtl/TimerCounter.v
+
+Highest level modules:
+c_tests_tb
+
+Total	0 error(s),   0 warning(s)

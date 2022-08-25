@@ -1,0 +1,222 @@
+debImport "-f" "run.f"
+wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "echo_tb"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvOpenFile -win $_nWave2 \
+           {/home/user/test/phase4/hardware/sim_c_test/vcs/wave.fsdb}
+schSelect -win $_nSchema3 -inst "CPU"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 76567 16189
+schZoomIn -win $_nSchema3 -pos 75694 16733
+schZoomIn -win $_nSchema3 -pos 73405 22946
+schZoomIn -win $_nSchema3 -pos 73650 22700
+schSelect -win $_nSchema3 -signal "clk" "_ExprNet__:uart:0:RD_N" \
+          "_ExprNet__:uart:1:RD_N" "reset_ff" "cs_uart_n" "UART_RXD" \
+          "UART_TXD" "data_addr\[11:0\]" "write_data\[31:0\]" \
+          "read_data_uart\[31:0\]" "data_addr\[31:0\]" -instport "uart" \
+          "uart_tx" "uart" "DataOut\[31:0\]" "uart" "uart_rx" "uart" \
+          "DataIn\[31:0\]" "uart" "Addr\[11:0\]" "uart" "WR_N" "uart" "RD_N" \
+          "uart" "CS_N" "uart" "reset" "uart" "clk" -inst "uart"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvCreateWindow
+wvSetPosition -win $_nWave4 {("G1" 0)}
+wvOpenFile -win $_nWave4 \
+           {/home/user/test/phase4/hardware/sim_c_test/vcs/wave.fsdb}
+schSelect -win $_nSchema3 -signal "clk" "_ExprNet__:uart:0:RD_N" \
+          "_ExprNet__:uart:1:RD_N" "reset_ff" "cs_uart_n" "UART_RXD" \
+          "UART_TXD" "data_addr\[11:0\]" "write_data\[31:0\]" \
+          "read_data_uart\[31:0\]" "data_addr\[31:0\]" -instport "uart" \
+          "uart_tx" "uart" "DataOut\[31:0\]" "uart" "uart_rx" "uart" \
+          "DataIn\[31:0\]" "uart" "Addr\[11:0\]" "uart" "WR_N" "uart" "RD_N" \
+          "uart" "CS_N" "uart" "reset" "uart" "clk" -inst "uart"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 11 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 15 )} 
+wvZoom -win $_nWave2 968745156.250000 976101759.305835
+wvZoom -win $_nWave2 968745156.250000 969389044.042613
+wvSelectSignal -win $_nWave2 {( "G1" 11 )} 
+wvSetCursor -win $_nWave2 968766532.806495 -snap {("G1" 11)}
+srcActiveTrace "echo_tb.CPU.reset_ff" -win $_nTrace1 -TraceByDConWave -TraceTime \
+           10000 -TraceValue 1
+wvSetCursor -win $_nWave2 225740.918874 -snap {("G1" 11)}
+wvSetCursor -win $_nWave2 168736.768220 -snap {("G1" 11)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoom -win $_nWave2 10946092.474420 11010222.143906
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSetCursor -win $_nWave2 10738671.058528 -snap {("G1" 11)}
+wvSetCursor -win $_nWave2 263316.658816 -snap {("G1" 11)}
+wvSetCursor -win $_nWave2 228735.670039 -snap {("G1" 10)}
+wvSetCursor -win $_nWave2 209638.706088 -snap {("G1" 10)}
+wvSetCursor -win $_nWave2 283962.025250 -snap {("G1" 10)}
+wvSetCursor -win $_nWave2 299446.050076 -snap {("G1" 10)}
+wvSelectSignal -win $_nWave2 {( "G1" 17 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 18 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 12 13 14 15 16 17 18 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 11)}
+wvScrollUp -win $_nWave2 4
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvScrollDown -win $_nWave2 4
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 10 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 9 )} 
+wvScrollUp -win $_nWave2 4
+wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 6 7 8 9 )} 
+wvCut -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 2)}
+verdiDockWidgetSetCurTab -dock windowDock_nSchema_3
+schSelect -win $_nSchema3 -inst "uart"
+schPushViewIn -win $_nSchema3
+schSetOptions -win $_nSchema3 -portName on
+schSetOptions -win $_nSchema3 -pinName on
+schSelect -win $_nSchema3 -instpin "u_uart" "reset"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema3 -inst "u_uart"
+schSelect -win $_nSchema3 -inst "u_uart"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -instpin "uareceive" "reset"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema3 -inst "uareceive"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 21434 -6312
+schZoomIn -win $_nSchema3 -pos 21492 -6254
+schZoomOut -win $_nSchema3 -pos 23321 -4556
+schZoomOut -win $_nSchema3 -pos 23320 -4556
+schZoomOut -win $_nSchema3 -pos 23388 -4488
+schZoomOut -win $_nSchema3 -pos 23387 -4233
+schPopViewUp -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 14789 828
+schZoomOut -win $_nSchema3 -pos 14559 757
+schZoomOut -win $_nSchema3 -pos 16177 1038
+schZoomOut -win $_nSchema3 -pos 15955 1010
+schZoomIn -win $_nSchema3 -pos 14397 456
+schPopViewUp -win $_nSchema3
+schSelect -win $_nSchema3 -signal "uart_rx"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvSetCursor -win $_nWave2 440138.644366 -snap {("G1" 4)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+verdiDockWidgetSetCurTab -dock windowDock_nWave_4
+verdiDockWidgetSetCurTab -dock windowDock_nWave_2
+schSelect -win $_nSchema3 -inst "u_uart"
+schPushViewIn -win $_nSchema3
+schSelect -win $_nSchema3 -instpin "uareceive" "reset"
+schSelect -win $_nSchema3 -signal "data_out_valid"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 5 )} 
+wvFitSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvZoomIn -win $_nWave2
+wvScrollUp -win $_nWave2 2
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+schSelect -win $_nSchema3 -inst "uareceive"
+schSelect -win $_nSchema3 -signal "clk"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvFitSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvFitSelected -win $_nWave2
+wvSetPosition -win $_nWave2 {("G1" 5)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvScrollUp -win $_nWave2 1
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvScrollDown -win $_nWave2 0
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectGroup -win $_nWave2 {G1}
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSelectGroup -win $_nWave2 {G2}
+wvSelectGroup -win $_nWave2 {G1}
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G1" 1 )} 
+debExit

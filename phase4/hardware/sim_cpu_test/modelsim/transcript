@@ -1,0 +1,364 @@
+ls
+# mem_path.vh
+# opcode.vh
+# run.f
+# testbench.tcl
+# transcript
+# vsim.wlf
+# work
+cd ..
+ls
+# Clean.bat
+# Clean.csh
+# Clean.sh
+# Makefile
+# modelsim
+# vcs
+pwd
+# /home/user/test/phase2/hardware/sim_c_test
+ls
+# Clean.bat
+# Clean.csh
+# Clean.sh
+# Makefile
+# modelsim
+# vcs
+cd modelsim
+ls
+# mem_path.vh
+# opcode.vh
+# run.f
+# testbench.tcl
+# transcript
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:40:11 on Aug 22,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module ALU
+# -- Compiling module adder_32bit
+# -- Compiling module adder_1bit
+# -- Compiling module ASYNC_RAM_DP_WBE
+# -- Compiling module control_unit
+# -- Compiling module reg_write
+# -- Compiling module ALUSrc
+# -- Compiling module ALUControl
+# -- Compiling module rv32i_cpu
+# -- Compiling module datapath
+# -- Compiling module reg_file_async
+# -- Compiling module SMU_RV32I_System
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:40:11 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.cpu_tb -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:40:11 on Aug 22,2022
+# Loading work.cpu_tb
+# Loading work.SMU_RV32I_System
+# Loading work.rv32i_cpu
+# Loading work.control_unit
+# Loading work.reg_write
+# Loading work.ALUSrc
+# Loading work.ALUControl
+# Loading work.datapath
+# Loading work.reg_file_async
+# Loading work.ALU
+# Loading work.adder_32bit
+# Loading work.adder_1bit
+# Loading work.ASYNC_RAM_DP_WBE
+# ** Error: (vsim-3033) Instantiation of 'Addr_Decoder' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../src/rtl/SMU_RV32I_System.v Line: 127
+#         Searched libraries:
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/220model
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/verilog
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             /home/user/test/phase2/hardware/sim_c_test/modelsim/work
+# ** Error: (vsim-3033) Instantiation of 'TimerCounter' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../src/rtl/SMU_RV32I_System.v Line: 135
+#         Searched libraries:
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/220model
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/verilog
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             /home/user/test/phase2/hardware/sim_c_test/modelsim/work
+# ** Error: (vsim-3033) Instantiation of 'GPIO' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../src/rtl/SMU_RV32I_System.v Line: 147
+#         Searched libraries:
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/vhdl/220model
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/verilog
+#             /home/user/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             /home/user/test/phase2/hardware/sim_c_test/modelsim/work
+# Error loading design
+# End time: 14:40:11 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:42:04 on Aug 22,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module ALU
+# -- Compiling module adder_32bit
+# -- Compiling module adder_1bit
+# -- Compiling module ASYNC_RAM_DP_WBE
+# -- Compiling module control_unit
+# -- Compiling module reg_write
+# -- Compiling module ALUSrc
+# -- Compiling module ALUControl
+# -- Compiling module rv32i_cpu
+# -- Compiling module datapath
+# -- Compiling module reg_file_async
+# -- Compiling module SMU_RV32I_System
+# -- Compiling module cpu_tb
+# -- Compiling module Addr_Decoder
+# -- Compiling module GPIO
+# -- Compiling module pulse_gen
+# -- Compiling module TimerCounter
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:42:04 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.cpu_tb -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:42:04 on Aug 22,2022
+# Loading work.cpu_tb
+# Loading work.SMU_RV32I_System
+# Loading work.rv32i_cpu
+# Loading work.control_unit
+# Loading work.reg_write
+# Loading work.ALUSrc
+# Loading work.ALUControl
+# Loading work.datapath
+# Loading work.reg_file_async
+# Loading work.ALU
+# Loading work.adder_32bit
+# Loading work.adder_1bit
+# Loading work.ASYNC_RAM_DP_WBE
+# Loading work.Addr_Decoder
+# Loading work.TimerCounter
+# Loading work.GPIO
+# Loading work.pulse_gen
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CPU'.  Expected 10, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_TXD'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_RXD'.
+# Loading libvpi.so
+# ** Error (suppressible): (vsim-3197) Load of "libvpi.so" failed: libvpi.so: cannot open shared object file: No such file or directory.
+# ** Error (suppressible): (vsim-PLI-3002) Failed to load PLI object file "libvpi.so".
+#    Time: 0 ns  Iteration: 0  Root: /
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$vcdpluson' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb File: ../../testbench/cpu_tb.v Line: 206
+# Error loading design
+# End time: 14:42:04 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 9
+LS
+# invalid command name "LS"
+ls
+# mem_path.vh
+# opcode.vh
+# run.f
+# testbench.tcl
+# transcript
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:45:46 on Aug 22,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module ALU
+# -- Compiling module adder_32bit
+# -- Compiling module adder_1bit
+# -- Compiling module ASYNC_RAM_DP_WBE
+# -- Compiling module control_unit
+# -- Compiling module reg_write
+# -- Compiling module ALUSrc
+# -- Compiling module ALUControl
+# -- Compiling module rv32i_cpu
+# -- Compiling module datapath
+# -- Compiling module reg_file_async
+# -- Compiling module SMU_RV32I_System
+# -- Compiling module cpu_tb
+# ** Error: (vlog-13069) ../../testbench/cpu_tb.v(61): near ".": syntax error, unexpected '.', expecting ')'.
+# -- Compiling module Addr_Decoder
+# -- Compiling module GPIO
+# -- Compiling module pulse_gen
+# -- Compiling module TimerCounter
+# End time: 14:45:47 on Aug 22,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# /home/user/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/vlog failed.
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:46:05 on Aug 22,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module ALU
+# -- Compiling module adder_32bit
+# -- Compiling module adder_1bit
+# -- Compiling module ASYNC_RAM_DP_WBE
+# -- Compiling module control_unit
+# -- Compiling module reg_write
+# -- Compiling module ALUSrc
+# -- Compiling module ALUControl
+# -- Compiling module rv32i_cpu
+# -- Compiling module datapath
+# -- Compiling module reg_file_async
+# -- Compiling module SMU_RV32I_System
+# -- Compiling module cpu_tb
+# -- Compiling module Addr_Decoder
+# -- Compiling module GPIO
+# -- Compiling module pulse_gen
+# -- Compiling module TimerCounter
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:46:05 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.cpu_tb -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:46:05 on Aug 22,2022
+# Loading work.cpu_tb
+# Loading work.SMU_RV32I_System
+# Loading work.rv32i_cpu
+# Loading work.control_unit
+# Loading work.reg_write
+# Loading work.ALUSrc
+# Loading work.ALUControl
+# Loading work.datapath
+# Loading work.reg_file_async
+# Loading work.ALU
+# Loading work.adder_32bit
+# Loading work.adder_1bit
+# Loading work.ASYNC_RAM_DP_WBE
+# Loading work.Addr_Decoder
+# Loading work.TimerCounter
+# Loading work.GPIO
+# Loading work.pulse_gen
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CPU'.  Expected 10, found 8.
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX3'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(15).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX2'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(16).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX1'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(17).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX0'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(18).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(19).
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_TXD'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_RXD'.
+# Loading libvpi.so
+# ** Error (suppressible): (vsim-3197) Load of "libvpi.so" failed: libvpi.so: cannot open shared object file: No such file or directory.
+# ** Error (suppressible): (vsim-PLI-3002) Failed to load PLI object file "libvpi.so".
+#    Time: 0 ns  Iteration: 0  Root: /
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$vcdpluson' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb File: ../../testbench/cpu_tb.v Line: 206
+# Error loading design
+# End time: 14:46:05 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 9
+ls
+# mem_path.vh
+# opcode.vh
+# run.f
+# testbench.tcl
+# transcript
+# vsim.wlf
+# work
+cd ../../..
+ls
+# hardware
+# software
+cd ..
+ls
+# c_test
+# phase2
+cd c_test
+ls
+# hardware
+# software
+cd hardware
+ls
+# sim_c_test
+# sim_cpu_test
+# src
+# testbench
+cd sim_c
+# couldn't change working directory to "sim_c": no such file or directory
+cd sim_c_test
+ls
+# Clean.bat
+# Clean.csh
+# Clean.sh
+# Makefile
+# modelsim
+# vcs
+cd modelsim
+ls
+# mem_path.vh
+# opcode.vh
+# run.f
+# testbench.tcl
+# transcript
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:47:54 on Aug 22,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module ALU
+# -- Compiling module adder_32bit
+# -- Compiling module adder_1bit
+# -- Compiling module ASYNC_RAM_DP_WBE
+# -- Compiling module control_unit
+# -- Compiling module reg_write
+# -- Compiling module ALUSrc
+# -- Compiling module ALUControl
+# -- Compiling module rv32i_cpu
+# -- Compiling module datapath
+# -- Compiling module reg_file_async
+# -- Compiling module SMU_RV32I_System
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:47:54 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.cpu_tb -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 14:47:54 on Aug 22,2022
+# Loading work.cpu_tb
+# Loading work.SMU_RV32I_System
+# Loading work.rv32i_cpu
+# Loading work.control_unit
+# Loading work.reg_write
+# Loading work.ALUSrc
+# Loading work.ALUControl
+# Loading work.datapath
+# Loading work.reg_file_async
+# Loading work.ALU
+# Loading work.adder_32bit
+# Loading work.adder_1bit
+# Loading work.ASYNC_RAM_DP_WBE
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CPU'.  Expected 10, found 3.
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX3'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX2'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX1'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'HEX0'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'LEDR'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_TXD'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_RXD'.
+# Loading libvpi.so
+# ** Error (suppressible): (vsim-3197) Load of "libvpi.so" failed: libvpi.so: cannot open shared object file: No such file or directory.
+# ** Error (suppressible): (vsim-PLI-3002) Failed to load PLI object file "libvpi.so".
+#    Time: 0 ns  Iteration: 0  Root: /
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$vcdpluson' is not defined.
+#    Time: 0 ns  Iteration: 0  Instance: /cpu_tb File: ../../testbench/cpu_tb.v Line: 206
+# Error loading design
+# End time: 14:47:54 on Aug 22,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 9

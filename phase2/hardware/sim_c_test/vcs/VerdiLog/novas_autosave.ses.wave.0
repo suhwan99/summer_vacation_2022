@@ -1,0 +1,89 @@
+Magic 271485
+Revision Verdi_P-2019.06-SP2-12
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1437 368 253 166
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/user/test/phase2/hardware/sim_c_test/vcs/wave.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 5947.580645 927822.580645
+cursor 390000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 9
+; marker line index
+markerPos 19
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/user/test/phase2/hardware/sim_c_test/vcs/wave.fsdb"
+addSignal -h 15 /c_tests_tb/CPU/iDecoder/CS_GPIO_N
+addSignal -h 15 -holdScope CS_TC_N
+addSignal -h 15 -holdScope CS_UART_N
+addSignal -h 15 -holdScope CS_MEM_N
+addSignal -h 15 -holdScope Addr[31:0]
+addSignal -h 15 -holdScope Addr[31:12]
+addSignal -h 15 /c_tests_tb/CPU/iTimer/clk
+addSignal -h 15 -holdScope reset
+addSignal -h 15 -holdScope RD_N
+addSignal -h 15 -holdScope StatusR[0]
+addSignal -h 15 -holdScope WR_N
+addSignal -h 15 -holdScope CS_N
+addSignal -h 15 -holdScope Intr
+addSignal -h 15 -holdScope DataOut[31:0]
+addSignal -h 15 -holdScope StatusR[31:0]
+addSignal -h 15 -holdScope Addr[11:0]
+addSignal -h 15 -holdScope DataIn[31:0]
+addSignal -h 15 -holdScope CompareR[31:0]
+addSignal -h 15 -holdScope CounterR[31:0]
+addGroup "G2"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/user/test/phase2/hardware/sim_c_test/vcs/wave.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/c_tests_tb"
+"/c_tests_tb/CPU"
+"/c_tests_tb/CPU/iGPIO"
+
+SCOPE_LIST_BEGIN
+"/c_tests_tb"
+"/c_tests_tb/CPU"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

@@ -1,0 +1,248 @@
+pwd
+# /home/user/test/phase3/hardware/sim_c_test/vcs
+ls
+# VerdiLog
+# code.hex
+# csrc
+# inter.fsdb
+# mem_path.vh
+# novas.conf
+# novas.rc
+# novas_dump.log
+# opcode.vh
+# run.f
+# run.sh
+# run_verdi.sh
+# simv
+# simv.daidir
+# testbench.tcl
+# transcript
+# ucli.key
+# vsim.wlf
+# wave.fsdb
+# work
+cd ../../../..
+ls
+# c_test
+# phase2
+# phase3
+# pll
+# pll_test
+cd pll_test
+ls
+# sim
+# sim_model
+# src
+# testbench
+# transcript
+cd sim
+cd sim
+# couldn't change working directory to "sim": no such file or directory
+ls
+# modelsim
+cd sim
+# couldn't change working directory to "sim": no such file or directory
+ls
+# modelsim
+cd modelsmi
+# couldn't change working directory to "modelsmi": no such file or directory
+cd modelsim
+ls
+# run.f
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:38:49 on Aug 24,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module alt_pll
+# -- Compiling module testbench
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module altpll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module pll_iobuf
+# -- Compiling module MF_stratix_pll
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/sgate.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/cycloneive_atoms.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/220model.v'
+# -- Scanning library file '../../sim_model/de2-115/sim_lib/altera_mf.v'
+# -- Compiling module dffp
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# 
+# Top level modules:
+# 	testbench
+# End time: 10:38:49 on Aug 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.testbench -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 10:38:49 on Aug 24,2022
+# Loading work.testbench
+# Loading work.alt_pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# Loading libvpi.so
+# ** Error (suppressible): (vsim-3197) Load of "libvpi.so" failed: libvpi.so: cannot open shared object file: No such file or directory.
+# ** Error (suppressible): (vsim-PLI-3002) Failed to load PLI object file "libvpi.so".
+#    Time: 0 ps  Iteration: 0  Root: /
+# Error loading design
+# End time: 10:38:49 on Aug 24,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+ls
+# run.f
+# testbench.tcl
+# vish_stacktrace.vstf
+# vsim.wlf
+# work
+cd ..
+cd ..
+ls
+# sim
+# sim_model
+# src
+# testbench
+# transcript
+cd ..
+ls
+# c_test
+# phase2
+# phase3
+# pll
+# pll_test
+cd phase3
+ls
+# hardware
+# software
+cd hardware
+ls
+# sim_c_test
+# sim_model
+# src
+# testbench
+cd sim_c_test
+ls
+# Clean.bat
+# Clean.csh
+# Clean.sh
+# Makefile
+# modelsim
+# vcs
+cd modelsim
+ls
+# mem_path.vh
+# opcode.vh
+# run.f
+# testbench.tcl
+# transcript
+# vsim.wlf
+# work
+source testbench.tcl
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:40:57 on Aug 24,2022
+# vlog -reportprogress 300 -f run.f 
+# -- Compiling module ALU
+# -- Compiling module adder_32bit
+# -- Compiling module adder_1bit
+# -- Compiling module ASYNC_RAM_DP_WBE
+# -- Compiling module control_unit
+# -- Compiling module reg_write
+# -- Compiling module ALUSrc
+# -- Compiling module ALUControl
+# -- Compiling module rv32i_cpu
+# -- Compiling module datapath
+# -- Compiling module reg_file_async
+# -- Compiling module SMU_RV32I_System
+# -- Compiling module cpu_tb
+# -- Compiling module Addr_Decoder
+# -- Compiling module GPIO
+# -- Compiling module pulse_gen
+# -- Compiling module TimerCounter
+# -- Compiling module ALTPLL_clkgen
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 10:40:57 on Aug 24,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.cpu_tb -Lf 220model -Lf altera_mf_ver -Lf verilog -Lf cycloneive_ver 
+# Start time: 10:40:57 on Aug 24,2022
+# Loading work.cpu_tb
+# Loading work.SMU_RV32I_System
+# Loading work.ALTPLL_clkgen
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.rv32i_cpu
+# Loading work.control_unit
+# Loading work.reg_write
+# Loading work.ALUSrc
+# Loading work.ALUControl
+# Loading work.datapath
+# Loading work.reg_file_async
+# Loading work.ALU
+# Loading work.adder_32bit
+# Loading work.adder_1bit
+# Loading work.ASYNC_RAM_DP_WBE
+# Loading work.Addr_Decoder
+# Loading work.TimerCounter
+# Loading work.GPIO
+# Loading work.pulse_gen
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'CPU'.  Expected 10, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX3'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX2'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(16).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX1'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(17).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'HEX0'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(18).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: ../../src/rtl/SMU_RV32I_System.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU File: ../../testbench/cpu_tb.v Line: 57
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_TXD'.
+# ** Warning: (vsim-3722) ../../testbench/cpu_tb.v(57): [TFMPC] - Missing connection for port 'UART_RXD'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'pll0'.  Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb/CPU/pll0 File: ../../src/rtl/SMU_RV32I_System.v Line: 71
+# ** Warning: (vsim-3722) ../../src/rtl/SMU_RV32I_System.v(71): [TFMPC] - Missing connection for port 'c3'.
+# Loading libvpi.so
+# ** Error (suppressible): (vsim-3197) Load of "libvpi.so" failed: libvpi.so: cannot open shared object file: No such file or directory.
+# ** Error (suppressible): (vsim-PLI-3002) Failed to load PLI object file "libvpi.so".
+#    Time: 0 ps  Iteration: 0  Root: /
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$vcdpluson' is not defined.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu_tb File: ../../testbench/cpu_tb.v Line: 206
+# Error loading design
+# End time: 10:40:57 on Aug 24,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 11

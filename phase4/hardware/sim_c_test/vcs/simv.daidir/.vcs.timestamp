@@ -1,0 +1,130 @@
+0 
+32
++itf+/tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/vcsdp_lite.tab
++vcsd1
++vpi
+-Mamsrun=
+-Masflags=--32
+-Mcc=gcc
+-Mcfl= -pipe -m32 -O -I/tools/synopsys/vcs-all/R-2020.12-SP2/include
+-Mcplusplus=g++
+-Mcrt0=
+-Mcrtn=
+-Mcsrc=
+-Mexternalobj=
+-Mldflags= -m32 -m32 -rdynamic
+-Mobjects= /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libvirsim.so /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/liberrorinf.so /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libsnpsmalloc.so /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libvfs.so
+-Mout=simv
+-Msaverestoreobj=/tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/vcs_save_restore_new.o
+-Msyslibs=/tools/synopsys/verdi/P-2019.06-SP2-12/share/PLI/VCS/LINUX/pli.a /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/ctype-stubs_32.a -ldl
+-Mvcsaceobjs=
+-Mxcflags= -pipe -m32 -I/tools/synopsys/vcs-all/R-2020.12-SP2/include
+-Mxllcflags=
+-P
+-Xvcs_run_simv=1
+-debug_acc+all
+-f run.f
+-fsdb
+-gen_obj
+-picarchive
+-sverilog
+-timescale=1ns/1ps
+/tools/synopsys/vcs-all/R-2020.12-SP2/linux/bin/vcs1
+/tools/synopsys/verdi/P-2019.06-SP2-12/share/PLI/VCS/LINUX/verdi.tab
+run.f
+59
+XMODIFIERS=@im=ibus
+XDG_VTNR=1
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=1
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_MENU_PREFIX=gnome-
+XDG_DATA_DIRS=/home/user/.local/share/flatpak/exports/share/:/var/lib/flatpak/exports/share/:/usr/local/share/:/usr/share/
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-user-VfGzet/database
+WINDOWPATH=1
+VTE_VERSION=5204
+VMR_MODE_FLAG=32
+VERDI_HOME=/tools/synopsys/verdi/P-2019.06-SP2-12
+VCS_PATHMAP_PRELOAD_DONE=1
+VCS_MX_HOME_INTERNAL=1
+VCS_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2
+VCS_EXEC_DONE=1
+VCS_DEPTH=0
+VCS_ARG_ADDED_FOR_TMP=1
+VCS_ARCH_OVERRIDE=linux
+VCS_ARCH=linux
+VCS_AMD_PURE32=1
+USERNAME=user
+UNAME=/bin/uname
+TOOL_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/linux
+SYNOPSYS_LC_ROOT=/tools/synopsys/lc/Q-2019.12-SP5
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+SSH_AGENT_PID=2556
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2410,unix/unix:/tmp/.ICE-unix/2410
+SCRNAME=vcs
+SCRIPT_NAME=vcs
+QT_IM_MODULE=ibus
+QT_GRAPHICSSYSTEM_CHECKED=1
+QTLIB=/usr/lib64/qt-3.3/lib
+QTINC=/usr/lib64/qt-3.3/include
+QTDIR=/usr/lib64/qt-3.3
+QSYS_ROOTDIR=/home/user/intelFPGA_lite/20.1/quartus/sopc_builder/bin
+PT_HOME=/tools/synopsys/pts/P-2019.03-SP5-1
+PLIOBJS=libvpi.so
+OVA_UUM=0
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LC_ALL=C
+IMSETTINGS_MODULE=none
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+ICC2_HOME=/tools/synopsys/icc2/Q-2019.12-SP6
+HISTCONTROL=ignoredups
+GNOME_TERMINAL_SERVICE=:1.106
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/1326bdae_9407_4ba3_b31f_d5f13e6f372c
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GDM_LANG=ko_KR.UTF-8
+GDMSESSION=gnome-classic
+DVE_HOME=/tools/synopsys/vcs-all/R-2020.12-SP2/gui/dve
+DESKTOP_SESSION=gnome-classic
+DC_HOME=/tools/synopsys/syn/P-2019.03-SP5-6
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-5tVHIjj9ip,guid=b0ce449efbe2012cdcf20e926306ccc0
+COLORTERM=truecolor
+0
+27
+1661390278 ../../sim_model/de2-115/sim_lib/220model.v
+1661390278 mem_path.vh
+1661390278 ../../sim_model/de2-115/sim_lib/cycloneive_atoms.v
+1661390278 ../../sim_model/de2-115/sim_lib/sgate.v
+1661390278 ../../sim_model/de2-115/sim_lib/altera_mf.v
+1661390278 ../../sim_model/de2-115/sim_lib/220model.v
+1661402935 sim_define.v
+1661390956 ../../src/rtl/uart_wrap.v
+1661392151 ../../src/rtl/uart_transmitter.v
+1661390973 ../../src/rtl/uart_reciver.v
+1661390947 ../../src/rtl/uart.v
+1661390278 ../../src/rtl/dualport_mem_synch_rw_dualclk.sv
+1661390278 ../../src/rtl/alt_pll.v
+1661390278 ../../src/rtl/TimerCounter.v
+1661390278 ../../src/rtl/GPIO.v
+1661390278 ../../src/rtl/Addr_Decoder.v
+1661394094 ../../testbench/echo_tb.v
+1661406797 ../../src/rtl/SMU_RV32I_System.v
+1661390278 ../../src/rtl/register_file_async.v
+1661390278 ../../src/rtl/cpu_main.v
+1661390278 ../../src/rtl/control_unit.v
+1661402239 ../../src/rtl/ASYNC_RAM_DP_WBE.v
+1661390278 ../../src/rtl/adder_32bit.v
+1661390278 ../../src/rtl/ALU.v
+1661404783 run.f
+1615803819 /tools/synopsys/verdi/P-2019.06-SP2-12/share/PLI/VCS/LINUX/verdi.tab
+1622257860 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/vcsdp_lite.tab
+4
+1622258754 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libvirsim.so
+1622258416 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/liberrorinf.so
+1622258234 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libsnpsmalloc.so
+1622258612 /tools/synopsys/vcs-all/R-2020.12-SP2/linux/lib/libvfs.so
+1661406820 simv.daidir
+-1 partitionlib

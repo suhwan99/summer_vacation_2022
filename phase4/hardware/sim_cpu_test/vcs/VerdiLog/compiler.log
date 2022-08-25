@@ -1,0 +1,42 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -f run.f
+        ../../src/rtl/ALU.v
+        ../../src/rtl/adder_32bit.v
+        ../../src/rtl/ASYNC_RAM_DP_WBE.v
+        ../../src/rtl/control_unit.v
+        ../../src/rtl/cpu_main.v
+        ../../src/rtl/register_file_async.v
+        ../../src/rtl/SMU_RV32I_System.v
+        ../../testbench/cpu_tb.v
+        ../../src/rtl/Addr_Decoder.v
+        ../../src/rtl/GPIO.v
+        ../../src/rtl/TimerCounter.v
+        ../../src/rtl/alt_pll.v
+        sim_define.v
+        -v ../../sim_model/de2-115/sim_lib/220model.v
+        -v ../../sim_model/de2-115/sim_lib/altera_mf.v
+        -v ../../sim_model/de2-115/sim_lib/sgate.v
+        -v ../../sim_model/de2-115/sim_lib/cycloneive_atoms.v
+        +libext+.v+.vlib
+
+Highest level modules:
+cpu_tb
+
+
+*Warning* port sizes differ (7 vs 1) in port connection (port HEX3)
+"../../testbench/cpu_tb.v", 61: 
+
+*Warning* port sizes differ (7 vs 1) in port connection (port HEX2)
+"../../testbench/cpu_tb.v", 62: 
+
+*Warning* port sizes differ (7 vs 1) in port connection (port HEX1)
+"../../testbench/cpu_tb.v", 63: 
+
+*Warning* port sizes differ (7 vs 1) in port connection (port HEX0)
+"../../testbench/cpu_tb.v", 64: 
+
+*Warning* port sizes differ (10 vs 1) in port connection (port LEDR)
+"../../testbench/cpu_tb.v", 65: 
+Total	0 error(s),   5 warning(s)
