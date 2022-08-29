@@ -39,7 +39,7 @@ module Addr_Decoder (input [31:0] Addr,
  
   always @(*)
   begin
-    if       (Addr[31:13] == 16'h1000)  // Instruction & Data Memory
+    if       (Addr[31:16] == 16'h1000)  // Instruction & Data Memory
       begin
            CS_MEM_N   <=0;
            CS_TC_N    <=1;

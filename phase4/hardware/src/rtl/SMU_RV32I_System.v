@@ -98,7 +98,7 @@ module SMU_RV32I_System (
     .clk			  (clk), 
     //.clkb       (clk),
     `endif
-		.reset		  (~reset_ff),
+		.reset		  (reset_ff),
 		.pc			    (fetch_addr),
 		.inst		  	(inst),
 		.MemWrite   (data_we),  // data_we: active high
@@ -126,7 +126,7 @@ module SMU_RV32I_System (
               .data_in1       (32'd0),
               .data_in2       (write_data),
               .we1     (1'b0),
-              .we2     (data_we),//~cs_mem_n & data_we
+              .we2     (~cs_mem_n & data_we),//~cs_mem_n & data_we
               .data_out1      (imem_inst),
               .data_out2      (read_imem_data_mem)
             );
@@ -145,7 +145,7 @@ module SMU_RV32I_System (
     .d0       (32'd0),
     .d1       (write_data),
     .wen0     (1'b0),
-    .wen1     (data_we),//~cs_mem_n & data_we
+    .wen1     (~cs_mem_n & data_we),//~cs_mem_n & data_we
     .q0       (imem_inst),
     .q1       (read_imem_data_mem)
   );
@@ -202,21 +202,11 @@ module SMU_RV32I_System (
     .HEX0  	(HEX0),
     .LEDG   (LEDR));
 
-  // reg uart_rx;
 
-  // always @(*)
-  // begin
-	//   if      (data_addr == 32'h80000000) 
-  //     begin
-  //       uart_rx = write_data[1];
-  //     end
-	//   else    
-  //       begin
-  //       uart_rx = 1'b0;
-  //     end     
-  // end
-
-uart_wrap uart(
+uart_wrap#(
+    .CLOCK_FREQ(CLOCK_FREQ),
+    .BAUD_RATE(BAUD_RATE)
+) uart(
     `ifdef FPGA
 		.clk     (clk180),
     `else

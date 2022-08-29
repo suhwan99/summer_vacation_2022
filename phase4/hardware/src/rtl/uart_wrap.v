@@ -14,12 +14,14 @@ module uart_wrap (
 );
 
     parameter CLOCK_FREQ = 125_000_000;
-`ifdef FPGA
-    parameter BAUD_RATE = 19_200;
-`else
-    parameter BAUD_RATE = 1_000_000;
-`endif
 
+    parameter BAUD_RATE = 1_000_000;
+//     parameter CLOCK_FREQ = 125_000_000;
+// `ifdef FPGA
+//     parameter BAUD_RATE = 19_200;
+// `else
+//     parameter BAUD_RATE = 1_000_000;
+// `endif
     wire [7:0] data_in;
     wire data_in_valid;
     wire  data_in_ready;

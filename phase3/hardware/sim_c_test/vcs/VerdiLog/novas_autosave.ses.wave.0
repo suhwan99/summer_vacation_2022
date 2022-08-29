@@ -2,11 +2,11 @@ Magic 271485
 Revision Verdi_P-2019.06-SP2-12
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1439 416 253 166
+viewPort 0 25 1439 279 253 166
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
-openDirFile -d / "" "/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb"
+openDirFile -d / "" "/home/user/test/phase3/hardware/sim_cpu_test/vcs/wave.fsdb"
 
 ; file time scale:
 ; fileTimeScale ### s|ms|us|ns|ps
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 185342294.921875 186067705.078125
-cursor 185510000.000000
-marker 185610000.000000
+zoom 0.000000 1764470.000000
+cursor 210000.000000
+marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
 top 0
 ; marker line index
-markerPos 5
+markerPos 1
 
 ; event list
 ; addEvent event_name event_expression
@@ -46,28 +46,10 @@ curSTATUS ByChange
 
 
 addGroup "G1"
-activeDirFile "" "/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb"
-addSignal -h 15 /c_tests_tb/CPU/clk
-addSignal -h 15 -holdScope clk0
-addSignal -h 15 -holdScope clk90
-addSignal -h 15 -holdScope clk180
-addSignal -h 15 -holdScope clk270
+activeDirFile "" "/home/user/test/phase3/hardware/sim_cpu_test/vcs/wave.fsdb"
+addSignal -h 15 /c_tests_tb/CPU/reset_ff
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
-activeDirFile "" "/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb"
-
-GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
-getSignalForm close
-
-"/c_tests_tb"
-
-SCOPE_LIST_BEGIN
-"/c_tests_tb"
-"/c_tests_tb/CPU"
-SCOPE_LIST_END
-
-GETSIGNALFORM_SCOPE_HIERARCHY_END
-
 

@@ -229,6 +229,7 @@ nWaveOpenFsdbDirHistory = "\"/home/user/test/c_test/hardware/sim_c_test/vcs/wave
 version = Verdi_P-2019.06-SP2-12
 wave/localformat.fm = 100,100,435,332
 openfile.fm = 100,100,723,532
+schLoadSym.fm = 100,100,366,353
 wave/unknownSave.fm = 100,174,520,275
 [General]
 autoSaveSession = FALSE
@@ -769,7 +770,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 559 276 800 479 245 381 505 183
-viewPort = 0 25 1439 303 253 166
+viewPort = 0 25 1439 286 253 166
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -1309,7 +1310,7 @@ schAsmTriColor_qt = #01ffff qt_solidLine
 pre_select = True
 ShowPassThroughNet = False
 ComputedAnnotColor = ID_PURPLE5
-viewport = 0 25 1068 461
+viewport = 0 25 1068 480
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1385,7 +1386,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1439 303 253 166
+viewPort = 0 25 1439 286 253 166
 [wave.1]
 viewPort = 0 25 1439 303 253 166
 [wave.2]

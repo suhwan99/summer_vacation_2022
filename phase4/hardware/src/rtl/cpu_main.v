@@ -214,9 +214,6 @@ assign sign_extension_imm[31:0] = {{20{instruction[31]}},instruction[31:20]};
 assign s_imm[31:0] = {{20{instruction[31]}},instruction[31:25],instruction[11:7]}; 
 
 
-
-
-
 assign Addr_Last2[1:0] = ALUresult[1:0];
 
 
@@ -300,9 +297,6 @@ always@ (*)
         endcase
         
     end
-
-
-
 
 
 reg [31:0] tohost_csr;

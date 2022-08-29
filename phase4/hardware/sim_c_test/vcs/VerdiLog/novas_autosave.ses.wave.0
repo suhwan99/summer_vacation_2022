@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_P-2019.06-SP2-12
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1439 303 253 166
+viewPort 0 25 1439 460 253 166
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -16,16 +16,16 @@ signalSpacing 5
 
 ; windowTimeUnit is used for zoom, cursor & marker
 ; waveform viewport range
-zoom 0.000000 32.000000
-cursor 210000.000000
-marker 0.000000
+zoom 0.000000 112765991.951710
+cursor 11770000.000000
+marker 25750000.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 1
+top 0
 ; marker line index
-markerPos 0
+markerPos 8
 
 ; event list
 ; addEvent event_name event_expression
@@ -47,13 +47,39 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home/user/test/phase4/hardware/sim_c_test/vcs/wave.fsdb"
-addSignal -h 165 /echo_tb/CPU/clk
-addSignal -h 15 -holdScope reset_ff
-addSignal -h 15 /echo_tb/CPU/uart/reset
-addSignal -h 15 /echo_tb/CPU/uart/u_uart/reset
-addSignal -h 165 /echo_tb/CPU/uart/uart_rx
-addGroup "G2" -e FALSE
+addSignal -h 15 -UNSIGNED -BIN /echo_tb/CPU/read_data_uart[31:0]
+addSignal -h 15 -holdScope cs_uart_n
+addSignal -h 15 -holdScope inst[31:0]
+addSignal -h 15 -holdScope fetch_addr[31:0]
+addSignal -h 15 -UNSIGNED -BIN -holdScope read_data_uart[31:0]
+addSignal -h 15 -holdScope UART_TXD
+addSignal -h 15 -UNSIGNED -BIN -holdScope read_data_uart[31:0]
+addSignal -h 15 -holdScope UART_RXD
+addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status
 ; active file of getSignalForm
 
+
+FILTER_SIGNAL_BEGIN
+
+"*"
+
+FILTER_STRING_LIST_BEGIN
+FILTER_STRING_LIST_END
+
+FILTER_TYPE_LIST_BEGIN
+"All"
+"Input"
+"Output"
+"Inout"
+"Net"
+"Register"
+"Buffer"
+"Linkage"
+"ClassTransaction"
+"Property"
+"Others"
+FILTER_TYPE_LIST_END
+
+FILTER_SIGNAL_END

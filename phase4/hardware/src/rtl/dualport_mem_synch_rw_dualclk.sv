@@ -52,7 +52,7 @@ module dualport_mem_synch_rw_dualclk
 
    
 	// port B
-	always@(posedge clk2)
+	always@(posedge clk1)
 	begin
 		if(we2) begin
 		// edit this code if using other than four bytes per word
@@ -67,7 +67,7 @@ module dualport_mem_synch_rw_dualclk
 	// assign data_reg1 = mem[addr1];
 	// assign data_reg2 = mem[addr2];
 
-  always @(posedge clk1)
+  always @(posedge clk2)
   begin
     data_reg1 <= mem[addr1];
   end

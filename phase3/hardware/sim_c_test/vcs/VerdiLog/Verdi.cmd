@@ -1,42 +1,25 @@
 debImport "-f" "run.f"
 wvCreateWindow
+schCreateWindow -delim "." -win $_nSchema1 -scope "c_tests_tb"
 wvSetPosition -win $_nWave2 {("G1" 0)}
 wvOpenFile -win $_nWave2 \
-           {/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb}
-wvGetSignalOpen -win $_nWave2
-wvGetSignalSetScope -win $_nWave2 "/c_tests_tb"
-wvGetSignalSetScope -win $_nWave2 "/c_tests_tb/CPU"
-wvSetPosition -win $_nWave2 {("G1" 5)}
-wvSetPosition -win $_nWave2 {("G1" 5)}
-wvAddSignal -win $_nWave2 -clear
-wvAddSignal -win $_nWave2 -group {"G1" \
-{/c_tests_tb/CPU/clk} \
-{/c_tests_tb/CPU/clk0} \
-{/c_tests_tb/CPU/clk90} \
-{/c_tests_tb/CPU/clk180} \
-{/c_tests_tb/CPU/clk270} \
-}
-wvAddSignal -win $_nWave2 -group {"G2" \
-}
-wvSelectSignal -win $_nWave2 {( "G1" 1 2 3 4 5 )} 
-wvSetPosition -win $_nWave2 {("G1" 5)}
-wvGetSignalClose -win $_nWave2
-wvSetCursor -win $_nWave2 23888687.655936 -snap {("G2" 0)}
-wvZoomAll -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomIn -win $_nWave2
-wvZoomOut -win $_nWave2
-wvZoomOut -win $_nWave2
-wvSetCursor -win $_nWave2 185512335.733074 -snap {("G1" 2)}
-wvSetMarker -win $_nWave2 185610000.000000
-wvShowDeltaFreq -win $_nWave2 -freq
+           {/home/user/test/phase3/hardware/sim_cpu_test/vcs/wave.fsdb}
+schSelect -win $_nSchema3 -inst "CPU"
+schPushViewIn -win $_nSchema3
+schZoomIn -win $_nSchema3 -pos 47439 29487
+schZoomIn -win $_nSchema3 -pos 47439 29487
+schZoomIn -win $_nSchema3 -pos 47439 29487
+schZoomIn -win $_nSchema3 -pos 47294 29415
+schZoomIn -win $_nSchema3 -pos 47240 29361
+schZoomIn -win $_nSchema3 -pos 47240 29360
+schSetOptions -win $_nSchema3 -pinName on
+schSetOptions -win $_nSchema3 -portName on
+schSelect -win $_nSchema3 -signal "_ExprNet__:icpu:0:reset"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+schSelect -win $_nSchema3 -signal "reset_ff"
+schAddSelectedToWave -win $_nSchema3 -clipboard
+wvDrop -win $_nWave2
+wvSetCursor -win $_nWave2 47928.259557 -snap {("G1" 1)}
+wvSetCursor -win $_nWave2 211239.366197 -snap {("G1" 1)}
 debExit

@@ -17,7 +17,7 @@
 ../../src/rtl/uart_reciver.v
 ../../src/rtl/uart_transmitter.v
 ../../src/rtl/uart_wrap.v
-sim_define.v
+../../src/rtl/sim_define.v
 
 
 //////// INTEL FPGA LIBRARY /////

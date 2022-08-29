@@ -9,7 +9,7 @@ Command arguments:
         ../../src/rtl/cpu_main.v
         ../../src/rtl/register_file_async.v
         ../../src/rtl/SMU_RV32I_System.v
-        ../../testbench/cpu_tb.v
+        ../../testbench/c_tests_tb.v
         ../../src/rtl/Addr_Decoder.v
         ../../src/rtl/GPIO.v
         ../../src/rtl/TimerCounter.v
@@ -29,24 +29,24 @@ Command arguments:
 *Error* usage of Multi Dimension Vector is supported only if the option '-sv' is specified
 "../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 31: 
 Highest level modules:
-cpu_tb
+c_tests_tb
 dualport_mem_synch_rw_dualclk
 
 
 *Warning* port sizes differ (7 vs 1) in port connection (port HEX3)
-"../../testbench/cpu_tb.v", 61: 
+"../../testbench/c_tests_tb.v", 40: 
 
 *Warning* port sizes differ (7 vs 1) in port connection (port HEX2)
-"../../testbench/cpu_tb.v", 62: 
+"../../testbench/c_tests_tb.v", 41: 
 
 *Warning* port sizes differ (7 vs 1) in port connection (port HEX1)
-"../../testbench/cpu_tb.v", 63: 
+"../../testbench/c_tests_tb.v", 42: 
 
 *Warning* port sizes differ (7 vs 1) in port connection (port HEX0)
-"../../testbench/cpu_tb.v", 64: 
+"../../testbench/c_tests_tb.v", 43: 
 
 *Warning* port sizes differ (10 vs 1) in port connection (port LEDR)
-"../../testbench/cpu_tb.v", 65: 
+"../../testbench/c_tests_tb.v", 44: 
 
 *Error* failed to find identifier ADDRESS_WIDTH
 "../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 28: 

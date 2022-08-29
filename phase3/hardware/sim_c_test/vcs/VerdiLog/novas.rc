@@ -391,11 +391,11 @@ savePropDtl = TRUE
 importDesignForm = 539,229,715,574
 EditAliasDialog = 653,261,611,582
 CompressTimeRangeDialog = 660,416,597,272
-qWaveSignalDialog = 347,388,800,479
 QwInfoMsgDlg = 584,520,750,250
 QwWarnMsgDlg = 523,792,600,250
 openFileDlg = 658,311,602,483
-QwUserAskDlg = 798,487,324,134
+QwUserAskDlg = 798,524,324,134
+qWaveSignalDialog = 559,313,800,479
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -717,33 +717,33 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Message
-width = 2000
-visualIndex = 4
-isHidden = FALSE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = Time
+name = Severity
 width = 60
-visualIndex = 0
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = Message
+width = 2000
+visualIndex = 4
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Severity
+name = Time
 width = 60
-visualIndex = 1
+visualIndex = 0
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.parRule]
@@ -767,8 +767,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 347 351 800 479 245 381 505 183
-viewPort = 0 25 1439 553 253 166
+getSignalForm = 559 276 800 479 245 381 505 183
+viewPort = 0 25 1439 416 253 166
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -1384,7 +1384,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1439 553 253 166
+viewPort = 0 25 1439 416 253 166
 [wave.1]
 viewPort = 0 25 1437 380 184 166
 [wave.2]

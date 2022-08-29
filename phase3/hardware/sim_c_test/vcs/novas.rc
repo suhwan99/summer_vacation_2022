@@ -392,10 +392,10 @@ importDesignForm = 539,229,715,574
 EditAliasDialog = 653,261,611,582
 CompressTimeRangeDialog = 660,416,597,272
 QwInfoMsgDlg = 584,520,750,250
-QwWarnMsgDlg = 523,792,600,250
-openFileDlg = 658,311,602,483
-QwUserAskDlg = 798,524,324,134
 qWaveSignalDialog = 559,313,800,479
+openFileDlg = 658,311,602,483
+QwWarnMsgDlg = 523,792,600,250
+QwUserAskDlg = 798,487,324,134
 [Relationship]
 hideRecursiceNode = FALSE
 [Session Cache]
@@ -723,28 +723,28 @@ visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
+name = Time
+width = 60
+visualIndex = 0
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Time
-width = 60
-visualIndex = 0
-isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.parRule]
 parRulePathInterForm = ""
@@ -768,7 +768,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 559 276 800 479 245 381 505 183
-viewPort = 0 25 1439 416 253 166
+viewPort = 0 25 1439 279 253 166
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -1039,8 +1039,8 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
-RecentFile1 = "\"/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb\""
-RecentFile2 = "\"/home/user/test/phase3/hardware/sim_cpu_test/vcs/wave.fsdb\""
+RecentFile1 = "\"/home/user/test/phase3/hardware/sim_cpu_test/vcs/wave.fsdb\""
+RecentFile2 = "\"/home/user/test/phase3/hardware/sim_c_test/vcs/wave.fsdb\""
 RecentFile3 = "\"/home/user/test/phase2/hardware/sim_c_test/vcs/wave.fsdb\""
 RecentFile4 = "\"/home/user/test/c_test/hardware/sim_c_test/vcs/wave.fsdb\""
 RecentFile5 = "\"/home/user/test/c_test/hardware/sim_c_test/vcs/inter.fsdb\""
@@ -1308,7 +1308,7 @@ schAsmTriColor_qt = #01ffff qt_solidLine
 pre_select = True
 ShowPassThroughNet = False
 ComputedAnnotColor = ID_PURPLE5
-viewport = 0 25 1068 213
+viewport = 0 25 1068 487
 [schematics_print]
 Signature = FALSE
 DesignName = PCU
@@ -1384,7 +1384,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1439 416 253 166
+viewPort = 0 25 1439 279 253 166
 [wave.1]
 viewPort = 0 25 1437 380 184 166
 [wave.2]
