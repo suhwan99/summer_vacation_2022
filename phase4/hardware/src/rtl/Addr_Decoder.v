@@ -12,7 +12,8 @@ module Addr_Decoder (input [31:0] Addr,
                      output reg CS_MEM_N,
                      output reg CS_TC_N,
                      output reg CS_UART_N,
-                     output reg CS_GPIO_N);
+                     output reg CS_GPIO_N,
+                     output reg CS_BIOS_N);
   
 //======================================================================
 // Address       Peripheral           Peripheral Name         Size
@@ -45,6 +46,7 @@ module Addr_Decoder (input [31:0] Addr,
            CS_TC_N    <=1;
            CS_UART_N  <=1;
            CS_GPIO_N  <=1;
+           CS_BIOS_N <=1;
       end
     
     else if  (Addr[31:12] == 20'h80001)  // Timer
@@ -53,6 +55,7 @@ module Addr_Decoder (input [31:0] Addr,
            CS_TC_N    <=0;
            CS_UART_N  <=1;
            CS_GPIO_N  <=1;
+           CS_BIOS_N <=1;
       end
      
     else if  (Addr[31:12] == 20'h80000)  // UART
@@ -61,6 +64,7 @@ module Addr_Decoder (input [31:0] Addr,
            CS_TC_N     <=1;
            CS_UART_N   <=0;
            CS_GPIO_N   <=1;
+           CS_BIOS_N <=1;
       end
 
     else if  (Addr[31:12] == 20'h80002)  // GPIO
@@ -69,14 +73,23 @@ module Addr_Decoder (input [31:0] Addr,
            CS_TC_N     <=1;
            CS_UART_N   <=1;
            CS_GPIO_N   <=0;
+           CS_BIOS_N <=1;
       end
-
+    else if  (Addr[31:28] == 4'b0100)  // BIOS
+      begin
+           CS_MEM_N    <=1;
+           CS_TC_N     <=1;
+           CS_UART_N   <=1;
+           CS_GPIO_N   <=1;
+           CS_BIOS_N <=0;
+      end
     else 
       begin
-           CS_MEM_N   <=1;
+           CS_MEM_N   <=0;
            CS_TC_N    <=1;
            CS_UART_N  <=1;
            CS_GPIO_N  <=1;
+           CS_BIOS_N <=1;
       end
   end
   

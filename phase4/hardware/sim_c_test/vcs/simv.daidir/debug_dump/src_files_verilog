@@ -1,6 +1,6 @@
 /home/user/test/phase4/hardware/sim_c_test/vcs/mem_path.vh
-/home/user/test/phase4/hardware/sim_model/de2-115/sim_lib/220model.v
-/home/user/test/phase4/hardware/sim_model/de2-115/sim_lib/altera_mf.v
+/home/user/test/phase4/hardware/sim_c_test/vcs/opcode.vh
+/home/user/test/phase4/hardware/sim_c_test/vcs/sim_define.v
 /home/user/test/phase4/hardware/src/rtl/ALU.v
 /home/user/test/phase4/hardware/src/rtl/ASYNC_RAM_DP_WBE.v
 /home/user/test/phase4/hardware/src/rtl/Addr_Decoder.v
@@ -8,14 +8,14 @@
 /home/user/test/phase4/hardware/src/rtl/SMU_RV32I_System.v
 /home/user/test/phase4/hardware/src/rtl/TimerCounter.v
 /home/user/test/phase4/hardware/src/rtl/adder_32bit.v
-/home/user/test/phase4/hardware/src/rtl/alt_pll.v
+/home/user/test/phase4/hardware/src/rtl/bios_ASYNC_RAM_DP_WBE.v
+/home/user/test/phase4/hardware/src/rtl/bios_dualport_mem_synch_rw_dualclk.sv
 /home/user/test/phase4/hardware/src/rtl/control_unit.v
 /home/user/test/phase4/hardware/src/rtl/cpu_main.v
 /home/user/test/phase4/hardware/src/rtl/dualport_mem_synch_rw_dualclk.sv
 /home/user/test/phase4/hardware/src/rtl/register_file_async.v
-/home/user/test/phase4/hardware/src/rtl/sim_define.v
 /home/user/test/phase4/hardware/src/rtl/uart.v
 /home/user/test/phase4/hardware/src/rtl/uart_reciver.v
 /home/user/test/phase4/hardware/src/rtl/uart_transmitter.v
 /home/user/test/phase4/hardware/src/rtl/uart_wrap.v
-/home/user/test/phase4/hardware/testbench/echo_tb.v
+/home/user/test/phase4/hardware/testbench/bios_tb.v

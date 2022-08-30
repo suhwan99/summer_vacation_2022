@@ -12,7 +12,8 @@ module dualport_mem_synch_rw_dualclk
 		BYTE_WIDTH = 8,
 		ADDRESS_WIDTH = 12,
 		BYTES = 4,
-		DATA_WIDTH = BYTE_WIDTH * BYTES
+		DATA_WIDTH = BYTE_WIDTH * BYTES,
+		MIF_HEX = ""
 )
 (
 	input [ADDRESS_WIDTH-1:0] addr1,
@@ -33,10 +34,10 @@ module dualport_mem_synch_rw_dualclk
 	reg [DATA_WIDTH-1:0] data_reg1;
 	reg [DATA_WIDTH-1:0] data_reg2;
 
-  //initial
-  //begin : INIT
-  //  $readmemh("bios.hex", mem);
-  //end
+  initial
+  begin : INIT
+   $readmemh("code.hex", mem);
+  end
 
 	// port A
 	always@(posedge clk1)

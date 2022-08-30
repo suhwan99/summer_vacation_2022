@@ -171,7 +171,6 @@ module uart_parse_tb();
     $display("Timeout!");
     $fatal();
   end
-
 `ifdef FSDB
   initial
   begin
@@ -179,5 +178,4 @@ module uart_parse_tb();
     $fsdbDumpvars(0);
   end
 `endif
-
 endmodule

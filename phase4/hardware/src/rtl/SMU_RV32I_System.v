@@ -37,11 +37,13 @@ module SMU_RV32I_System (
   wire locked;
   wire [31:0] fetch_addr;
   wire [31:0] imem_inst;
-  wire [31:0] inst;
+  wire [31:0] bios_inst;
+  reg [31:0] inst;
   wire [31:0] data_addr;
   wire [31:0] read_data_gpio;
   wire [31:0] read_data_timer;
   wire [31:0] read_data_uart;
+  reg [31:0] read_data_nbios;
   wire [31:0] write_data;
   wire [3:0]  ByteEnable;
   reg  [31:0] read_data;
@@ -49,6 +51,7 @@ module SMU_RV32I_System (
   wire        cs_timer_n;
   wire        cs_gpio_n;
   wire        cs_uart_n;
+  wire        cs_bios_n;
   wire        data_we;
 
   wire clk = CLOCK_50;
@@ -69,6 +72,7 @@ module SMU_RV32I_System (
 
   assign clkb = ~clk;
 
+`ifdef FPGA
   ALTPLL_clkgen pll0(
 			 .inclk0   (CLOCK_50), 
 			 .c0       (clk0), 
@@ -76,16 +80,29 @@ module SMU_RV32I_System (
 			 .c2       (clk180), 
        .c3       (clk270),
 			 .locked   (locked)); 
+`endif
 
-  wire cs_bios_n;
+
   wire [31:0] read_imem_data_mem;
+  wire [31:0] read_bios_data_mem;
   wire uart_tx; 
+
+
+
+  // always @(*)
+  // begin
+	//   if      (~cs_timer_n) read_data <= read_data_timer;
+	//   else if (~cs_gpio_n)  read_data <= read_data_gpio;
+  //   else if(~cs_uart_n ) read_data <= read_data_uart;
+	//   else                  read_data <= read_imem_data_mem;
+  // end
   always @(*)
   begin
-	  if      (~cs_timer_n) read_data <= read_data_timer;
-	  else if (~cs_gpio_n)  read_data <= read_data_gpio;
-    else if(~cs_uart_n ) read_data <= read_data_uart;
-	  else                  read_data <= read_imem_data_mem;
+	  if      (~cs_timer_n) read_data = read_data_timer;
+	  else if (~cs_gpio_n)  read_data = read_data_gpio;
+    else if(~cs_uart_n ) read_data = read_data_uart;
+    else if(~cs_bios_n ) read_data = read_bios_data_mem;
+	  else                          read_data = read_imem_data_mem;
   end
 
 	rv32i_cpu #(
@@ -93,12 +110,12 @@ module SMU_RV32I_System (
   ) icpu (
     `ifdef FPGA
 		.clk			  (clk0), 
-    .clkb       (clk270),
+    //.clkb       (clk270),
     `else
     .clk			  (clk), 
     //.clkb       (clk),
     `endif
-		.reset		  (reset_ff),
+		.reset		  (~reset_ff),
 		.pc			    (fetch_addr),
 		.inst		  	(inst),
 		.MemWrite   (data_we),  // data_we: active high
@@ -113,8 +130,8 @@ module SMU_RV32I_System (
 
     `ifdef FPGA
             dualport_mem_synch_rw_dualclk #(
-                .DWIDTH (DWIDTH),
-                .AWIDTH (AWIDTH),
+                .DATA_WIDTH (DWIDTH),
+                .ADDRESS_WIDTH (AWIDTH),
                 .MIF_HEX (MIF_HEX)
             ) imem (
               .clk1      (clk90),
@@ -131,29 +148,68 @@ module SMU_RV32I_System (
               .data_out2      (read_imem_data_mem)
             );
 
+            bios_dualport_mem_synch_rw_dualclk #(
+                .DATA_WIDTH (DWIDTH),
+                .ADDRESS_WIDTH (AWIDTH),
+                .MIF_HEX (MIF_BIOS_HEX)
+            )bios(
+              .clk2      (clk180),
+              .addr1   (fetch_addr[AWIDTH+2-1:2]),
+              .addr2    (data_addr[AWIDTH+2-1:2]),
+              .data_in1       (32'd0),
+              .data_in2       (32'd0),
+              .data_out1      (bios_inst),
+              .data_out2      (read_bios_data_mem)
+            );
+
     `else
-      ASYNC_RAM_DP_WBE #(
-      .DWIDTH (DWIDTH),
-      .AWIDTH (AWIDTH),
-      .MIF_HEX (MIF_HEX)
-  ) imem (
-    .clk      (clk),
-    .addr0    (fetch_addr[AWIDTH+2-1:2]),
-    .addr1    (data_addr[AWIDTH+2-1:2]),
-    .wbe0     (4'd0),
-    .wbe1     (ByteEnable),
-    .d0       (32'd0),
-    .d1       (write_data),
-    .wen0     (1'b0),
-    .wen1     (~cs_mem_n & data_we),//~cs_mem_n & data_we
-    .q0       (imem_inst),
-    .q1       (read_imem_data_mem)
-  );
+                ASYNC_RAM_DP_WBE #(
+              .DWIDTH (DWIDTH),
+              .AWIDTH (AWIDTH),
+              .MIF_HEX (MIF_HEX)
+          ) imem (
+            .clk      (clk),
+            .addr0    (fetch_addr[AWIDTH+2-1:2]),
+            .addr1    (data_addr[AWIDTH+2-1:2]),
+            .wbe0     (4'd0),
+            .wbe1     (ByteEnable),
+            .d0       (32'd0),
+            .d1       (write_data),
+            .wen0     (1'b0),
+            .wen1     (~cs_mem_n & data_we),//~cs_mem_n & data_we
+            .q0       (imem_inst),
+            .q1       (read_imem_data_mem)
+          );
 
-
+          bios_ASYNC_RAM_DP_WBE #(
+              .DWIDTH (DWIDTH),
+              .AWIDTH (AWIDTH),
+              .MIF_HEX (MIF_BIOS_HEX)
+              )bios(
+                .clk      (clk),
+                .addr0    (fetch_addr[AWIDTH+2-1:2]),
+                .addr1    (data_addr[AWIDTH+2-1:2]),
+                .d0       (32'd0),
+                .d1       (32'd0),  
+                .q0       (bios_inst),
+                .q1       (read_bios_data_mem)
+              );
   `endif
+`ifdef FPGA
+  always @(*)
+  begin
+      if (fetch_addr[30]) inst = bios_inst;
+      else                         inst = imem_inst;
+  end
+`else
+always @(*)
+  begin
+      if (fetch_addr[30]) inst = bios_inst;
+      else                         inst = imem_inst;
+  end
+`endif
 
-  assign inst = imem_inst;
+  // assign inst = imem_inst or bios_inst;
 
   // Add Address Decoder & Data Mux
   // Add Timer, GPIO, UART
@@ -163,15 +219,16 @@ module SMU_RV32I_System (
 		.CS_MEM_N    (cs_mem_n) ,
 		.CS_TC_N     (cs_timer_n),
 		.CS_UART_N   (cs_uart_n),
-		.CS_GPIO_N   (cs_gpio_n));
+		.CS_GPIO_N   (cs_gpio_n),
+    .CS_BIOS_N (cs_bios_n));
 
   	TimerCounter    iTimer (
     `ifdef FPGA
 		.clk     (clk180),
     `else
-    		.clk     (clk),
+    .clk     (clk),
     `endif
-		.reset   (reset_ff),
+		.reset   (~reset_ff),
 		.CS_N    (cs_timer_n),
 		.RD_N    (~data_re),
 		.WR_N    (~data_we),
@@ -184,9 +241,9 @@ module SMU_RV32I_System (
     `ifdef FPGA
 		.clk     (clk180),
     `else
-    		.clk     (clk),
+    .clk     (clk),
     `endif
-    .reset  (reset_ff),
+    .reset  (~reset_ff),
     .CS_N   (cs_gpio_n),
     .RD_N   (~data_re),
     .WR_N   (~data_we),
@@ -210,9 +267,9 @@ uart_wrap#(
     `ifdef FPGA
 		.clk     (clk180),
     `else
-    		.clk     (clk),
+    .clk     (clk),
     `endif
-  .reset (reset_ff),
+  .reset (~reset_ff),
   .CS_N (cs_uart_n),
   .RD_N (~data_re),
   .WR_N (~data_we),

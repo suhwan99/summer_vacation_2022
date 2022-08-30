@@ -17,11 +17,17 @@
         "module",
         4
     ],
-    "rv32i_cpu": [
-        "rv32i_cpu",
-        "HLPA2",
+    "bios_ASYNC_RAM_DP_WBE": [
+        "bios_ASYNC_RAM_DP_WBE",
+        "GMqfY",
         "module",
-        7
+        2
+    ],
+    "bios_dualport_mem_synch_rw_dualclk": [
+        "bios_dualport_mem_synch_rw_dualclk",
+        "vzsS1",
+        "module",
+        14
     ],
     "cpu_tb": [
         "cpu_tb",
@@ -46,6 +52,12 @@
         "T7HIq",
         "module",
         6
+    ],
+    "ALTPLL_clkgen": [
+        "ALTPLL_clkgen",
+        "sQGVI",
+        "module",
+        15
     ],
     "dualport_mem_synch_rw_dualclk": [
         "dualport_mem_synch_rw_dualclk",

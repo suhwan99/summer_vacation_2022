@@ -2,149 +2,179 @@
 Command arguments:
     +define+verilog
     -f run.f
+        ./sim_define.v
         ../../src/rtl/ALU.v
         ../../src/rtl/adder_32bit.v
         ../../src/rtl/ASYNC_RAM_DP_WBE.v
         ../../src/rtl/control_unit.v
-        ../../src/rtl/cpu_main.v
         ../../src/rtl/register_file_async.v
+        ../../src/rtl/bios_ASYNC_RAM_DP_WBE.v
+        ../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv
+        ../../src/rtl/cpu_main.v
         ../../src/rtl/SMU_RV32I_System.v
-        ../../testbench/echo_tb.v
         ../../src/rtl/Addr_Decoder.v
         ../../src/rtl/GPIO.v
         ../../src/rtl/TimerCounter.v
-        ../../src/rtl/alt_pll.v
         ../../src/rtl/dualport_mem_synch_rw_dualclk.sv
         ../../src/rtl/uart.v
         ../../src/rtl/uart_reciver.v
         ../../src/rtl/uart_transmitter.v
         ../../src/rtl/uart_wrap.v
-        sim_define.v
-        -v ../../sim_model/de2-115/sim_lib/220model.v
-        -v ../../sim_model/de2-115/sim_lib/altera_mf.v
-        -v ../../sim_model/de2-115/sim_lib/sgate.v
-        -v ../../sim_model/de2-115/sim_lib/cycloneive_atoms.v
-        +libext+.v+.vlib
+        ../../testbench/bios_tb.v
 
+
+*Error* Syntax error at BYTE_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 12: 
+
+*Error* usage of Multi Dimension Vector is supported only if the option '-sv' is specified
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 30: 
 
 *Error* Syntax error at BYTE_WIDTH
 "../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 12: 
 
 *Error* usage of Multi Dimension Vector is supported only if the option '-sv' is specified
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 31: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 32: 
 Highest level modules:
-echo_tb
+bios_dualport_mem_synch_rw_dualclk
 dualport_mem_synch_rw_dualclk
+bios_tb
 
 
 *Error* failed to find identifier ADDRESS_WIDTH
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 28: 
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 27: 
 
 *Error* failed to find identifier BYTES
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 31: 
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 30: 
 
 *Error* failed to find identifier BYTE_WIDTH
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 31: 
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 30: 
 
 *Error* failed to find identifier DATA_WIDTH
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 33: 
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 32: 
+
+*Error* failed to find identifier DATA_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 33: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 69: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 71: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 74: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 76: 
+
+*Error* failed to find identifier ADDRESS_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 29: 
+
+*Error* failed to find identifier BYTES
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 32: 
+
+*Error* failed to find identifier BYTE_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 32: 
 
 *Error* failed to find identifier DATA_WIDTH
 "../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 34: 
 
+*Error* failed to find identifier DATA_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 35: 
+
 *Error* failed to find identifier clk1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 42: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 43: 
 
 *Error* failed to find identifier we1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 44: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 45: 
 
 *Error* failed to find identifier be1[0]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 46: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
 
 *Error* failed to find identifier addr1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 46: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
 
 *Error* failed to find identifier data_in1[7:0]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 46: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
 
 *Error* failed to find identifier be1[1]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
 
 *Error* failed to find identifier addr1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
 
 *Error* failed to find identifier data_in1[15:8]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
 
 *Error* failed to find identifier be1[2]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
 
 *Error* failed to find identifier addr1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
 
 *Error* failed to find identifier data_in1[23:16]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
 
 *Error* failed to find identifier be1[3]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 50: 
 
 *Error* failed to find identifier addr1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 50: 
 
 *Error* failed to find identifier data_in1[31:24]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
-
-*Error* failed to find identifier clk2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 55: 
-
-*Error* failed to find identifier we2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 57: 
-
-*Error* failed to find identifier be2[0]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 59: 
-
-*Error* failed to find identifier addr2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 59: 
-
-*Error* failed to find identifier data_in2[7:0]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 59: 
-
-*Error* failed to find identifier be2[1]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
-
-*Error* failed to find identifier addr2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
-
-*Error* failed to find identifier data_in2[15:8]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
-
-*Error* failed to find identifier be2[2]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
-
-*Error* failed to find identifier addr2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
-
-*Error* failed to find identifier data_in2[23:16]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
-
-*Error* failed to find identifier be2[3]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
-
-*Error* failed to find identifier addr2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
-
-*Error* failed to find identifier data_in2[31:24]
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 50: 
 
 *Error* failed to find identifier clk1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 70: 
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 56: 
 
-*Error* failed to find identifier addr1
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 72: 
+*Error* failed to find identifier we2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 58: 
 
-*Error* failed to find identifier clk2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 75: 
+*Error* failed to find identifier be2[0]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
 
 *Error* failed to find identifier addr2
-"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 77: 
-Total	39 error(s),   0 warning(s)
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
+
+*Error* failed to find identifier data_in2[7:0]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
+
+*Error* failed to find identifier be2[1]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
+
+*Error* failed to find identifier data_in2[15:8]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
+
+*Error* failed to find identifier be2[2]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+
+*Error* failed to find identifier data_in2[23:16]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+
+*Error* failed to find identifier be2[3]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 63: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 63: 
+
+*Error* failed to find identifier data_in2[31:24]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 63: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 71: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 73: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 76: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 78: 
+Total	50 error(s),   0 warning(s)

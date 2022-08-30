@@ -1,3 +1,5 @@
+
+./sim_define.v
 ../../src/rtl/ALU.v
 ../../src/rtl/adder_32bit.v
 ../../src/rtl/ASYNC_RAM_DP_WBE.v
@@ -5,13 +7,23 @@
 ../../src/rtl/cpu_main.v
 ../../src/rtl/register_file_async.v
 ../../src/rtl/SMU_RV32I_System.v
+../../src/rtl/bios_ASYNC_RAM_DP_WBE.v
+../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv
+
 ../../testbench/cpu_tb.v
+
 ../../src/rtl/Addr_Decoder.v
 ../../src/rtl/GPIO.v
 ../../src/rtl/TimerCounter.v
 ../../src/rtl/alt_pll.v
 ../../src/rtl/dualport_mem_synch_rw_dualclk.sv
-sim_define.v
+../../src/rtl/uart.v
+../../src/rtl/uart_reciver.v
+../../src/rtl/uart_transmitter.v
+../../src/rtl/uart_wrap.v
+
+
+
 //////// INTEL FPGA LIBRARY /////
 -v ../../sim_model/de2-115/sim_lib/220model.v
 -v ../../sim_model/de2-115/sim_lib/altera_mf.v

@@ -9,7 +9,7 @@ UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=echo_tb dualport_mem_synch_rw_dualclk 
+TOP=bios_dualport_mem_synch_rw_dualclk dualport_mem_synch_rw_dualclk bios_tb 
 OPTION=-ssv -ssy 
 ELAB_OPTION=-ssv -ssy 
 

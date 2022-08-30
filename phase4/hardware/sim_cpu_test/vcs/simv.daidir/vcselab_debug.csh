@@ -1,6 +1,6 @@
 #!/bin/csh -f
 
-cd /home/user/test/phase3/hardware/sim_cpu_test/vcs
+cd /home/user/test/phase4/hardware/sim_cpu_test/vcs
 
 #This ENV is used to avoid overriding current script in next vcselab run 
 setenv SNPS_VCSELAB_SCRIPT_NO_OVERRIDE  1

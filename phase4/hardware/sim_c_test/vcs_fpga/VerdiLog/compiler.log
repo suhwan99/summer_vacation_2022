@@ -1,0 +1,261 @@
+*design* DebussyLib (btIdent Verdi_P-2019.06-SP2-12)
+Command arguments:
+    +define+verilog
+    -f run.f
+        ./sim_define.v
+        ../../src/rtl/ALU.v
+        ../../src/rtl/adder_32bit.v
+        ../../src/rtl/ASYNC_RAM_DP_WBE.v
+        ../../src/rtl/control_unit.v
+        ../../src/rtl/register_file_async.v
+        ../../src/rtl/bios_ASYNC_RAM_DP_WBE.v
+        ../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv
+        ../../src/rtl/cpu_main.v
+        ../../src/rtl/SMU_RV32I_System.v
+        ../../testbench/bios_tb.v
+        ../../src/rtl/Addr_Decoder.v
+        ../../src/rtl/GPIO.v
+        ../../src/rtl/TimerCounter.v
+        ../../src/rtl/alt_pll.v
+        ../../src/rtl/dualport_mem_synch_rw_dualclk.sv
+        ../../src/rtl/uart.v
+        ../../src/rtl/uart_reciver.v
+        ../../src/rtl/uart_transmitter.v
+        ../../src/rtl/uart_wrap.v
+        -v ../../sim_model/de2-115/sim_lib/220model.v
+        -v ../../sim_model/de2-115/sim_lib/altera_mf.v
+        -v ../../sim_model/de2-115/sim_lib/sgate.v
+        -v ../../sim_model/de2-115/sim_lib/cycloneive_atoms.v
+        +libext+.v+.vlib
+
+
+*Error* Syntax error at BYTE_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 12: 
+
+*Error* usage of Multi Dimension Vector is supported only if the option '-sv' is specified
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 30: 
+
+*Error* Syntax error at BYTE_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 12: 
+
+*Error* usage of Multi Dimension Vector is supported only if the option '-sv' is specified
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 32: 
+Highest level modules:
+ASYNC_RAM_DP_WBE
+bios_ASYNC_RAM_DP_WBE
+bios_tb
+
+
+*Error* failed to find identifier ADDRESS_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 27: 
+
+*Error* failed to find identifier BYTES
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 30: 
+
+*Error* failed to find identifier BYTE_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 30: 
+
+*Error* failed to find identifier DATA_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 32: 
+
+*Error* failed to find identifier DATA_WIDTH
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 33: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 69: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 71: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 74: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/bios_dualport_mem_synch_rw_dualclk.sv", 76: 
+
+*Error* failed to find port 'clk1' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 137: 
+
+*Error* failed to find port 'clk2' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 138: 
+
+*Error* failed to find port 'addr1' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 139: 
+
+*Error* failed to find port 'addr2' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 140: 
+
+*Error* failed to find port 'be1' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 141: 
+
+*Error* failed to find port 'be2' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 142: 
+
+*Error* failed to find port 'data_in1' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 143: 
+
+*Error* failed to find port 'data_in2' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 144: 
+
+*Error* failed to find port 'we1' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 145: 
+
+*Error* failed to find port 'we2' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 146: 
+
+*Error* failed to find port 'data_out1' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 147: 
+
+*Error* failed to find port 'data_out2' for instance 'imem'
+"../../src/rtl/SMU_RV32I_System.v", 148: 
+
+*Warning* Failed to find the specified instance parameter DATA_WIDTH in the master dualport_mem_synch_rw_dualclk
+"../../src/rtl/SMU_RV32I_System.v", 136: 
+
+*Warning* Failed to find the specified instance parameter ADDRESS_WIDTH in the master dualport_mem_synch_rw_dualclk
+"../../src/rtl/SMU_RV32I_System.v", 136: 
+
+*Warning* Failed to find the specified instance parameter MIF_HEX in the master dualport_mem_synch_rw_dualclk
+"../../src/rtl/SMU_RV32I_System.v", 136: 
+
+*Error* failed to find port 'clk2' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 156: 
+
+*Error* failed to find port 'addr1' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 157: 
+
+*Error* failed to find port 'addr2' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 158: 
+
+*Error* failed to find port 'data_in1' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 159: 
+
+*Error* failed to find port 'data_in2' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 160: 
+
+*Error* failed to find port 'data_out1' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 161: 
+
+*Error* failed to find port 'data_out2' for instance 'bios'
+"../../src/rtl/SMU_RV32I_System.v", 162: 
+
+*Warning* Failed to find the specified instance parameter DATA_WIDTH in the master bios_dualport_mem_synch_rw_dualclk
+"../../src/rtl/SMU_RV32I_System.v", 155: 
+
+*Warning* Failed to find the specified instance parameter ADDRESS_WIDTH in the master bios_dualport_mem_synch_rw_dualclk
+"../../src/rtl/SMU_RV32I_System.v", 155: 
+
+*Warning* Failed to find the specified instance parameter MIF_HEX in the master bios_dualport_mem_synch_rw_dualclk
+"../../src/rtl/SMU_RV32I_System.v", 155: 
+
+*Error* failed to find identifier ADDRESS_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 29: 
+
+*Error* failed to find identifier BYTES
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 32: 
+
+*Error* failed to find identifier BYTE_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 32: 
+
+*Error* failed to find identifier DATA_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 34: 
+
+*Error* failed to find identifier DATA_WIDTH
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 35: 
+
+*Error* failed to find identifier clk1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 43: 
+
+*Error* failed to find identifier we1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 45: 
+
+*Error* failed to find identifier be1[0]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
+
+*Error* failed to find identifier data_in1[7:0]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 47: 
+
+*Error* failed to find identifier be1[1]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
+
+*Error* failed to find identifier data_in1[15:8]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 48: 
+
+*Error* failed to find identifier be1[2]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
+
+*Error* failed to find identifier data_in1[23:16]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 49: 
+
+*Error* failed to find identifier be1[3]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 50: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 50: 
+
+*Error* failed to find identifier data_in1[31:24]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 50: 
+
+*Error* failed to find identifier clk1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 56: 
+
+*Error* failed to find identifier we2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 58: 
+
+*Error* failed to find identifier be2[0]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
+
+*Error* failed to find identifier data_in2[7:0]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 60: 
+
+*Error* failed to find identifier be2[1]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
+
+*Error* failed to find identifier data_in2[15:8]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 61: 
+
+*Error* failed to find identifier be2[2]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+
+*Error* failed to find identifier data_in2[23:16]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 62: 
+
+*Error* failed to find identifier be2[3]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 63: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 63: 
+
+*Error* failed to find identifier data_in2[31:24]
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 63: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 71: 
+
+*Error* failed to find identifier addr1
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 73: 
+
+*Error* failed to find identifier clk2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 76: 
+
+*Error* failed to find identifier addr2
+"../../src/rtl/dualport_mem_synch_rw_dualclk.sv", 78: 
+Total	69 error(s),   6 warning(s)

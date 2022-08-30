@@ -1,0 +1,68 @@
+{
+    "std": [
+        "std",
+        "reYIK",
+        "module",
+        12
+    ],
+    "adder_1bit": [
+        "adder_1bit",
+        "KaZs1",
+        "module",
+        1
+    ],
+    "ASYNC_RAM_DP_WBE": [
+        "ASYNC_RAM_DP_WBE",
+        "TV9z4",
+        "module",
+        4
+    ],
+    "bios_ASYNC_RAM_DP_WBE": [
+        "bios_ASYNC_RAM_DP_WBE",
+        "GMqfY",
+        "module",
+        11
+    ],
+    "bios_dualport_mem_synch_rw_dualclk": [
+        "bios_dualport_mem_synch_rw_dualclk",
+        "vzsS1",
+        "module",
+        14
+    ],
+    "Addr_Decoder": [
+        "Addr_Decoder",
+        "gMGVA",
+        "module",
+        5
+    ],
+    "GPIO": [
+        "GPIO",
+        "JWNVz",
+        "module",
+        8
+    ],
+    "pulse_gen": [
+        "pulse_gen",
+        "T7HIq",
+        "module",
+        6
+    ],
+    "dualport_mem_synch_rw_dualclk": [
+        "dualport_mem_synch_rw_dualclk",
+        "hk5wD",
+        "module",
+        13
+    ],
+    "echo_tb": [
+        "echo_tb",
+        "JbtdU",
+        "module",
+        10
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        3
+    ]
+}

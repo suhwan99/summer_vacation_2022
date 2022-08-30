@@ -146,7 +146,7 @@ Limit information:
 cputime		unlimited
 filesize		unlimited
 datasize		unlimited
-stacksize		8193 kbytes
+stacksize		8192 kbytes
 coredumpsize		0 kbytes
 memoryuse		unlimited
 vmemoryuse		unlimited
@@ -160,8 +160,8 @@ Cannot get runtime environment variables: environ is NULL
 Runtime command line arguments:
 argv[0]=simv
 161 profile - 100
-          CPU/Mem usage: 0.050 sys,  0.270 user,  162.60M mem
-162 Elapsed time:    0:00:00    Mon Aug 29 10:36:20 2022
+          CPU/Mem usage: 0.060 sys,  0.250 user,  158.14M mem
+162 Elapsed time:    0:00:00    Tue Aug 30 14:11:57 2022
 163 pliAppInit
 164 FSDB_GATE is set.
 165 FSDB_RTL is set.
@@ -179,7 +179,7 @@ argv[0]=simv
 177 *  may cause abnormal behavior, please contact Synopsys support for   *
 178 *  assistance.                                                        *
 179 ***********************************************************************
-180 sps_call_fsdbDumpfile_main at 0 : ../../testbench/echo_tb.v(162)
+180 sps_call_fsdbDumpfile_main at 0 : ../../testbench/bios_tb.v(416)
 181 argv[0]: (wave.fsdb)
 182 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 183 *Verdi* : Create FSDB file 'wave.fsdb'
@@ -187,7 +187,7 @@ argv[0]=simv
 185   "vcs '-sverilog' '-R' '-timescale=1ns/1ps' '-debug_acc+all' '-dubug_region+cell+encrypt' '-f' 'run.f' 2>&1"
 186 DVDI_is_vir_unload_enabled is enable
 187 FSDB_VCS_ENABLE_FAST_VC is enable
-188 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/echo_tb.v(163)
+188 sps_call_fsdbDumpvars_vd_main at 0 : ../../testbench/bios_tb.v(417)
 189 argv[0]: (0)
 190 [spi_vcs_vd_ppi_create_root]: no upf option
 191 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
@@ -195,36 +195,36 @@ argv[0]=simv
 193 *Verdi* : Begin traversing the scopes, layer (0).
 194 *Verdi* : End of traversing.
 195 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.050 sys,  0.280 user,  259.29M mem
-                   incr: 0.000 sys,  0.010 user,  8.25M mem
-                   accu: 0.000 sys,  0.010 user,  8.25M mem
-              accu incr: 0.000 sys,  0.010 user,  8.25M mem
+          CPU/Mem usage: 0.060 sys,  0.270 user,  255.07M mem
+                   incr: 0.000 sys,  0.010 user,  8.62M mem
+                   accu: 0.000 sys,  0.010 user,  8.62M mem
+              accu incr: 0.000 sys,  0.010 user,  8.62M mem
 
-          Count usage: 1126 var,  938 idcode,  521 callback
-                 incr: 1126 var,  938 idcode,  521 callback
-                 accu: 1126 var,  938 idcode,  521 callback
-            accu incr: 1126 var,  938 idcode,  521 callback
-196 Elapsed time:    0:00:00    Mon Aug 29 10:36:20 2022
+          Count usage: 613 var,  457 idcode,  162 callback
+                 incr: 613 var,  457 idcode,  162 callback
+                 accu: 613 var,  457 idcode,  162 callback
+            accu incr: 613 var,  457 idcode,  162 callback
+196 Elapsed time:    0:00:00    Tue Aug 30 14:11:57 2022
 197 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.050 sys,  0.280 user,  260.34M mem
-                   incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.010 user,  9.31M mem
-              accu incr: 0.000 sys,  0.000 user,  1.05M mem
+          CPU/Mem usage: 0.060 sys,  0.270 user,  256.27M mem
+                   incr: 0.000 sys,  0.000 user,  1.19M mem
+                   accu: 0.000 sys,  0.010 user,  9.81M mem
+              accu incr: 0.000 sys,  0.000 user,  1.19M mem
 
-          Count usage: 1126 var,  938 idcode,  521 callback
+          Count usage: 613 var,  457 idcode,  162 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1126 var,  938 idcode,  521 callback
+                 accu: 613 var,  457 idcode,  162 callback
             accu incr: 0 var,  0 idcode,  0 callback
-198 Elapsed time:    0:00:00    Mon Aug 29 10:36:20 2022
-199 End of simulation at 1999990000
-200 Elapsed time:    0:00:15    Mon Aug 29 10:36:35 2022
+198 Elapsed time:    0:00:00    Tue Aug 30 14:11:57 2022
+199 End of simulation at 1076190000
+200 Elapsed time:    0:00:01    Tue Aug 30 14:11:58 2022
 201 Begin FSDB profile info:
-202 FSDB Writer : bc1(17020325) bcn(46417777) mtf/stf(0/9)
-FSDB Writer elapsed time : flush(3.138594) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+202 FSDB Writer : bc1(205867) bcn(751065) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.069295) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 203 End FSDB profile info
-204 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:283 BlockUsed:388
-205                        ProduceTime:15.148067889 ConsumerTime:7.467708799 Buffer:64MB
+204 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:5 BlockUsed:7
+205                        ProduceTime:0.942652159 ConsumerTime:0.083479560 Buffer:64MB
 206 SimExit
-207 Elapsed time:    0:00:15    Mon Aug 29 10:36:35 2022
+207 Elapsed time:    0:00:01    Tue Aug 30 14:11:58 2022
 208 Sim process exit

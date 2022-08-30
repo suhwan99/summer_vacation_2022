@@ -34,7 +34,7 @@ module echo_tb();
         .HEX1    (),
         .HEX0    (),
         .LEDR      (),
-        .BUTTON    ({2'b00,rst}),
+        .BUTTON    ({2'b00,~rst}),
         .UART_RXD  (serial_in),
         .UART_TXD  (serial_out)
     );

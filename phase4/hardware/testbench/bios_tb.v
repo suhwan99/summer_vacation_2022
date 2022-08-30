@@ -35,14 +35,14 @@ module bios_tb();
     .MIF_HEX(""),
     .MIF_BIOS_HEX("code.hex")
     ) CPU (
-        .CLOCK_50M  (clk),
+        .CLOCK_50  (clk),
         .SW        (10'b0),
         .HEX3    (),
         .HEX2    (),
         .HEX1    (),
         .HEX0    (),
         .LEDR      (),
-        .BUTTON    ({2'b00,rst}),
+        .BUTTON    ({2'b00,~rst}),
         .UART_RXD  (serial_in),
         .UART_TXD  (serial_out)
     );
@@ -161,64 +161,64 @@ module bios_tb();
     fpga_to_host(8'h3e); // >
     fpga_to_host(8'h20); // [space]
 
-    // Test invalid command
-    $display("[TEST 2] Send an invalid command. Expect to see: \\n\\rUnrecognized token: ");
-    fork
-      begin
-        host_to_fpga(8'h61); // 'a'
-        host_to_fpga(8'h62); // 'b'
-        host_to_fpga(8'h63); // 'c'
-        host_to_fpga(8'h64); // 'd'
-        host_to_fpga(8'h20); // [space]
-      end
-      begin
-        // echo back the input characters ...
-        fpga_to_host(8'h61); // 'a'
-        fpga_to_host(8'h62); // 'b'
-        fpga_to_host(8'h63); // 'c'
-        fpga_to_host(8'h64); // 'd'
-        fpga_to_host(8'h20); // '[space]'
-
-        // message from BIOS program
-        fpga_to_host(8'h0a); // '\n'
-        fpga_to_host(8'h0d); // '\r'
-        fpga_to_host(8'h55); // 'U'
-        fpga_to_host(8'h6e); // 'n'
-        fpga_to_host(8'h72); // 'r'
-        fpga_to_host(8'h65); // 'e'
-        fpga_to_host(8'h63); // 'c'
-        fpga_to_host(8'h6f); // 'o'
-        fpga_to_host(8'h67); // 'g'
-        fpga_to_host(8'h6e); // 'n'
-        fpga_to_host(8'h69); // 'i'
-        fpga_to_host(8'h7a); // 'z'
-        fpga_to_host(8'h65); // 'e'
-        fpga_to_host(8'h64); // 'd'
-        fpga_to_host(8'h20); // [space]
-        fpga_to_host(8'h74); // 't'
-        fpga_to_host(8'h6f); // 'o'
-        fpga_to_host(8'h6b); // 'k'
-        fpga_to_host(8'h65); // 'e'
-        fpga_to_host(8'h6e); // 'n'
-        fpga_to_host(8'h3a); // ':'
-        fpga_to_host(8'h20); // [space]
-
-        fpga_to_host(8'h61); // 'a'
-        fpga_to_host(8'h62); // 'b'
-        fpga_to_host(8'h63); // 'c'
-        fpga_to_host(8'h64); // 'd'
-
-        fpga_to_host(8'h0a); // \n
-        fpga_to_host(8'h0d); // \r
-        fpga_to_host(8'h31); // 1
-        fpga_to_host(8'h35); // 5
-        fpga_to_host(8'h31); // 1
-        fpga_to_host(8'h3e); // >
-        fpga_to_host(8'h20); // [space]
-
-      end
-    join
-
+//    // Test invalid command
+//    $display("[TEST 2] Send an invalid command. Expect to see: \\n\\rUnrecognized token: ");
+//    fork
+//      begin
+//        host_to_fpga(8'h61); // 'a'
+//        host_to_fpga(8'h62); // 'b'
+//        host_to_fpga(8'h63); // 'c'
+//        host_to_fpga(8'h64); // 'd'
+//        host_to_fpga(8'h20); // [space]
+//      end
+//      begin
+//        // echo back the input characters ...
+//        fpga_to_host(8'h61); // 'a'
+//        fpga_to_host(8'h62); // 'b'
+//        fpga_to_host(8'h63); // 'c'
+//        fpga_to_host(8'h64); // 'd'
+//        fpga_to_host(8'h20); // '[space]'
+//
+//        // message from BIOS program
+//        fpga_to_host(8'h0a); // '\n'
+//        fpga_to_host(8'h0d); // '\r'
+//        fpga_to_host(8'h55); // 'U'
+//        fpga_to_host(8'h6e); // 'n'
+//        fpga_to_host(8'h72); // 'r'
+//        fpga_to_host(8'h65); // 'e'
+//        fpga_to_host(8'h63); // 'c'
+//        fpga_to_host(8'h6f); // 'o'
+//        fpga_to_host(8'h67); // 'g'
+//        fpga_to_host(8'h6e); // 'n'
+//        fpga_to_host(8'h69); // 'i'
+//        fpga_to_host(8'h7a); // 'z'
+//        fpga_to_host(8'h65); // 'e'
+//        fpga_to_host(8'h64); // 'd'
+//        fpga_to_host(8'h20); // [space]
+//        fpga_to_host(8'h74); // 't'
+//        fpga_to_host(8'h6f); // 'o'
+//        fpga_to_host(8'h6b); // 'k'
+//        fpga_to_host(8'h65); // 'e'
+//        fpga_to_host(8'h6e); // 'n'
+//        fpga_to_host(8'h3a); // ':'
+//        fpga_to_host(8'h20); // [space]
+//
+//        fpga_to_host(8'h61); // 'a'
+//        fpga_to_host(8'h62); // 'b'
+//        fpga_to_host(8'h63); // 'c'
+//        fpga_to_host(8'h64); // 'd'
+//
+//        fpga_to_host(8'h0a); // \n
+//        fpga_to_host(8'h0d); // \r
+//        fpga_to_host(8'h31); // 1
+//        fpga_to_host(8'h35); // 5
+//        fpga_to_host(8'h31); // 1
+//        fpga_to_host(8'h3e); // >
+//        fpga_to_host(8'h20); // [space]
+//
+//      end
+//    join
+//
     // Test store command in BIOS mode
     $display("[TEST 3] Send [sw cafeaaaa 30000004] command. Expect to write 32'hcafeaaaa to both IMem[1] and DMem[1]");
     fork
@@ -242,7 +242,7 @@ module bios_tb();
         host_to_fpga(8'h30); // '0'
         host_to_fpga(8'h30); // '0'
         host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h34); // '4'
+        host_to_fpga(8'h38); // '8'
         host_to_fpga(8'h0d); // \r
       end
       begin
@@ -266,7 +266,7 @@ module bios_tb();
         fpga_to_host(8'h30); // '0'
         fpga_to_host(8'h30); // '0'
         fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h34); // '4'
+        fpga_to_host(8'h38); // '8'
 
         fpga_to_host(8'h0d); // \r
         fpga_to_host(8'h0a); // \n
@@ -278,17 +278,17 @@ module bios_tb();
       end
     join
 
-    $display("Imem[1]=%h DMem[1]=%h", `IMEM_PATH.mem[1], `DMEM_PATH.mem[1]);
+    $display("Imem[1]=%h DMem[1]=%h", `IMEM_PATH.mem[2], `DMEM_PATH.mem[2]);
 
     $display("Test Write to IMem");
-    if (`IMEM_PATH.mem[1] === 32'hcafeaaaa) begin
+    if (`IMEM_PATH.mem[2] === 32'hcafeaaaa) begin
       $display("PASSED!");
     end
     else
       $display("FAILED!");
 
     $display("Test Write to DMem");
-    if (`DMEM_PATH.mem[1] === 32'hcafeaaaa) begin
+    if (`DMEM_PATH.mem[2] === 32'hcafeaaaa) begin
       $display("PASSED!");
     end
     else
@@ -308,7 +308,7 @@ module bios_tb();
         host_to_fpga(8'h30); // '0'
         host_to_fpga(8'h30); // '0'
         host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h34); // '4'
+        host_to_fpga(8'h38); // '8'
         host_to_fpga(8'h0d); // \r
       end
       begin
@@ -323,7 +323,7 @@ module bios_tb();
         fpga_to_host(8'h30); // '0'
         fpga_to_host(8'h30); // '0'
         fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h34); // '4'
+        fpga_to_host(8'h38); // '8'
         fpga_to_host(8'h0d); // \r
 
         // message from BIOS program
@@ -335,7 +335,7 @@ module bios_tb();
         fpga_to_host(8'h30); // '0'
         fpga_to_host(8'h30); // '0'
         fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h34); // '4'
+        fpga_to_host(8'h38); // '4'
         fpga_to_host(8'h3a); // ':'
         fpga_to_host(8'h63); // 'c'
         fpga_to_host(8'h61); // 'a'
@@ -356,41 +356,41 @@ module bios_tb();
       end
     join
 
-    // Test jump command: switch to IMem address space
-    $display("[TEST 5] Send [jal 10000000] command. Expect to see: jal 10000000");
-    fork
-      begin
-        host_to_fpga(8'h6a); // 'j'
-        host_to_fpga(8'h61); // 'a'
-        host_to_fpga(8'h6c); // 'l'
-        host_to_fpga(8'h20); // [space]
-        host_to_fpga(8'h31); // '1'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h30); // '0'
-        host_to_fpga(8'h0d); // \r
-      end
-      begin
-        // echo back the input characters ...
-        fpga_to_host(8'h6a); // 'j'
-        fpga_to_host(8'h61); // 'a'
-        fpga_to_host(8'h6c); // 'l'
-        fpga_to_host(8'h20); // [space]
-        fpga_to_host(8'h31); // '1'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h30); // '0'
-        fpga_to_host(8'h0d); // \r
-      end
-    join
+//    // Test jump command: switch to IMem address space
+//    $display("[TEST 5] Send [jal 10000000] command. Expect to see: jal 10000000");
+//    fork
+//      begin
+//        host_to_fpga(8'h6a); // 'j'
+//        host_to_fpga(8'h61); // 'a'
+//        host_to_fpga(8'h6c); // 'l'
+//        host_to_fpga(8'h20); // [space]
+//        host_to_fpga(8'h31); // '1'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h30); // '0'
+//        host_to_fpga(8'h0d); // \r
+//      end
+//      begin
+//        // echo back the input characters ...
+//        fpga_to_host(8'h6a); // 'j'
+//        fpga_to_host(8'h61); // 'a'
+//        fpga_to_host(8'h6c); // 'l'
+//        fpga_to_host(8'h20); // [space]
+//        fpga_to_host(8'h31); // '1'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h30); // '0'
+//        fpga_to_host(8'h0d); // \r
+//      end
+//    join
     repeat (1000) @(posedge clk);
     // The instruction in IMem should be executed after jumping to IMem space
     $display("Test RF: RF[3]=%h", `RF_PATH.mem[3]);
