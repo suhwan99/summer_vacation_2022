@@ -10,6 +10,4 @@
 
 
 ## phase4 - uart/bios
-  1. top module인 SMU_RV32I_System에 uart_wrap module 연결
-      uart는 uart_reciver, uart_transmitter, uart_wrap, uart로 이루어져 있음
-      top module인 uart_wrap을 SMU_RV32I_System에 연결
+
