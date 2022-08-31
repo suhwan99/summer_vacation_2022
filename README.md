@@ -2,7 +2,7 @@
 
 ## phase1 - RISC-V  cpu_test/c_test/CSR
  ### RISC-V cpu test
-  * testbenc를 통해 cpu동작 확인
+  * testbench를 통해 cpu동작 확인
  ### c_test
   * 6가지의 c_code를 hex파일로 만들어 test
   * strcmp c_test에서 오류 발생
