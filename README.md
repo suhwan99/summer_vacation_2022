@@ -3,6 +3,12 @@
 ## phase1 - RISC-V  cpu_test/c_test/CSR
  ### RISC-V cpu test
   * testbenc를 통해 cpu동작 확인
+ ### c_test
+  * 6가지의 c_code를 hex파일로 만들어 test
+  * strcmp c_test에서 오류 발생
+    * verdi로 확인, pc값이 잘못 들어가는것을 확인
+    * cpu_main에서 jalr 동작이 pc+jalr_imm으로 잘못설계됨
+    * pc <= jalr_imm로 수정
   * csr 제작, 동작 확인
 
 ## phase2 - timer/gpio
