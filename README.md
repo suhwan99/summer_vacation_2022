@@ -13,10 +13,14 @@
   * top module인 SMU_RV32I_System에 GPIO module 연결
 
 ## phase3 - pll_test
- ### pll 연결
+ ### pll 생성
   * quartus 프로그램 사용 cyclone iv gx로 pll 파일 생성
   * pll에 50MHZ입력을 넣고 10MHZ의 출력을 받음
-  * phase는 0, 90, 180, 270로 설정   
+  * phase는 0, 90, 180, 270로 설정
+ ### pll test
+  * testbench를 제작하여 pll의 동작 확인
+ ### pll 연결
+  * SMU_RV32I_System에 pll 연결
 
 ## phase4 - uart/bios
  ### UART 연결
